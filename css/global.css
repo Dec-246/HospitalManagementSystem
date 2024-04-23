@@ -101,3 +101,10 @@ a.navbar-brand {
     color: #fff;  
   }
   
+/* Create staff page */
+
+.createStaffForm{
+  padding-bottom: 20px;
+  margin: auto;
+  text-align: center;
+}

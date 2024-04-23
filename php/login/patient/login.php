@@ -1,42 +1,42 @@
-<?php
-include("php/includes/navbar.php");
-?>
-<?php
-    // begin database connection
-    $conn = 'php/config.php';
-    $conn = new mysqli($servername, $username, $password, $dbname);
+<!-- <?php
+// include("php/includes/navbar.php");
+// ?>
+// <?php
+//     // begin database connection
+//     $conn = 'php/config.php';
+//     $conn = new mysqli($servername, $username, $password, $dbname);
 
-    $message = '';
+//     $message = '';
 
-    //check if form is submitted
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $username = $_POST['$username'];
-        $password = $_POST['$password'];
+//     //check if form is submitted
+//     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+//         $username = $_POST['$username'];
+//         $password = $_POST['$password'];
     
-        // fetch encryption $ password from user table
-        $stmt = $conn->prepare("INSERT INTO hashed_password, salt FROM users WHERE username = :username");
-        $stmt->bind_param(':username', $username);
-        $stmt->execute();
-        $result = $stmt->fetch(mysqli::FETCH_ASSOC);
+//         // fetch encryption $ password from user table
+//         $stmt = $conn->prepare("INSERT INTO hashed_password, salt FROM users WHERE username = :username");
+//         $stmt->bind_param(':username', $username);
+//         $stmt->execute();
+//         $result = $stmt->fetch(mysqli::FETCH_ASSOC);
 
-        if ($result) {
-            $hashed_password = hash('sha26', $password . $result['salt']);
+//         if ($result) {
+//             $hashed_password = hash('sha26', $password . $result['salt']);
 
-            //verify hashed password
-            if ($hashed_password === $result['hashed_result']) {
-                $_SESSION['loggedin'] = true;
-                $_SESSION['username'] = $username;
-                $message = "Login was successful!";
-                header('Location: index.php'); //redirect user to home page
-                exit;
-            } else {
-                $message = "Invalid username or password used!";
-            }
-        } else {
-            $message = "Invalid username or password used!";
-        }
-    }
-?>
+//             //verify hashed password
+//             if ($hashed_password === $result['hashed_result']) {
+//                 $_SESSION['loggedin'] = true;
+//                 $_SESSION['username'] = $username;
+//                 $message = "Login was successful!";
+//                 header('Location: index.php'); //redirect user to home page
+//                 exit;
+//             } else {
+//                 $message = "Invalid username or password used!";
+//             }
+//         } else {
+//             $message = "Invalid username or password used!";
+//         }
+//     }
+// ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -57,9 +57,9 @@ include("php/includes/navbar.php");
 
         <h2>Patient Log-in</h2>
 
-        <?php if ($message): ?>
+       <?php if ($message): ?>
             <p><?php echo $message; ?></p>
-        <?php endif; ?>
+        <?php endif; ?>-
 
         <form action="" method="post">
                 <div class="patientLoginForm">
@@ -79,4 +79,4 @@ include("php/includes/navbar.php");
                 <a href="php/signup/patientSignup.php"class="patientSignup">Sign-up</a>
         </form>
     </body>
-</html>
+</html> -->
