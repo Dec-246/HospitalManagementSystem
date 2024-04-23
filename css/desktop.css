@@ -1,0 +1,12 @@
+/* homepage */
+
+.homePageTitle{
+    text-align: center;
+    margin: auto;
+    max-width: 1200px;   
+}
+.homePageIntro{
+    text-align: center;
+    margin: auto;
+    max-width: 1350px;   
+}
