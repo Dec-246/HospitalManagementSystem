@@ -77,7 +77,7 @@ if (isset($_POST['submit'])) {
 
         <div class="navbarContainer">
             <?php
-            include("php/includes/navbar.php");
+            include("php/includes/admin/navbar.php");
             ?>
         </div>
 

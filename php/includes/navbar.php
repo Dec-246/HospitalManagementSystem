@@ -28,20 +28,25 @@
                 </li>
                 <ul class="navbar-nav flex-grow-1">
 
+                    
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="php/visitor/contactInfo.php">Contact info</a>
+                        <a class="nav-link text-dark" href="location.php">Location</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="contactInfo.php">Contact Us</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="howToBecomeMember.php">How To Become a Member</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="php/visitor/location.php">Location</a>
+                        <a class="nav-link text-dark" href="patientLogin.php">Patient log-in</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="php/visitor/contactUs.php">Contact Us</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" href="php/visitor/howToBecomeMember.php">How To Become a Member</a>
+                        <a class="nav-link text-dark" href="patientLogin.php">Patient log-in</a>
                     </li>
                 </ul>
             </div>

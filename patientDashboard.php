@@ -29,6 +29,36 @@
 
         <main>
 
+            <div class="rowButtons">
+                <div class="staffInfo">
+                    <a href="">Personal Info</a>
+                </div>
+
+                <div class="listOfAssertedPatients">
+                    <a href="">Patients</a>
+                </div>
+            </div>
+
+            <div class="rowButtons">
+                <div class="staffNotes">
+                    <a href="">Notes</a>
+                </div>
+
+                <div class="staffSchedule">
+                    <a href="">Schedule</a>
+                </div>
+            </div>
+
+            <div class="rowButtons">
+                <div class="patientLabResults">
+                    <a href="">Patient Lab test Results</a>
+                </div>
+
+                <div class="rowButtons">
+                    <a href="">Patient bookings</a>
+                </div>
+            </div>
+                
 
 
         </main>

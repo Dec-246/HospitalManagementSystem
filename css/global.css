@@ -112,10 +112,126 @@ a.navbar-brand {
     color: #fff;  
   }
   
+
+
+/* Admin */  
 /* Create staff page */
 
 .createStaffForm{
   padding-bottom: 20px;
   margin: auto;
   text-align: center;
+}
+
+/* Admin dashboard */
+.rowButtons{
+  display: flex;
+  flex-direction: row;
+}
+
+.registeredDoctors{
+  background-color: white;
+  color: black;
+  margin: auto;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 10px;
+  padding: 15px 32px;
+  width: 200px;
+}
+.assignDocToPatient{
+  background-color: white;
+  color: black;
+  margin: auto;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 10px;
+  padding: 15px 32px;
+  width: 200px;
+}
+
+.upcomingAppointments{
+  background-color: white;
+  color: black;
+  margin: auto;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 10px;
+  padding: 15px 32px;
+  width: 200px;
+}
+.patientData{
+  background-color: white;
+  color: black;
+  margin: auto;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 10px;
+  padding: 15px 32px;
+  width: 200px;
+}
+
+
+
+/* Patient */
+/* Patient dashboard */
+.staffInfo{
+  background-color: white;
+  color: black;
+  margin: auto;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 10px;
+  padding: 15px 32px;
+  width: 200px;
+}
+.listOfAssertedPatients{
+  background-color: white;
+  color: black;
+  margin: auto;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 10px;
+  padding: 15px 32px;
+  width: 200px;
+}
+.staffNotes{
+  background-color: white;
+  color: black;
+  margin: auto;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 10px;
+  padding: 15px 32px;
+  width: 200px;
+}
+.staffSchedule{
+  background-color: white;
+  color: black;
+  margin: auto;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 10px;
+  padding: 15px 32px;
+  width: 200px;
+}
+.patientLabResults{
+  background-color: white;
+  color: black;
+  margin: auto;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 10px;
+  padding: 15px 32px;
+  width: 200px;
+}
+.patientBookings{
+  background-color: white;
+  color: black;
+  margin: auto;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 10px;
+  padding: 15px 32px;
+  width: 200px;
 }

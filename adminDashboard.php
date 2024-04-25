@@ -17,7 +17,7 @@
     <div class="container">
         <div class="navbarContainer">
             <?php
-            include("php/includes/navbar.php");
+            include("php/includes/admin/navbar.php");
             ?>
         </div>
 
@@ -29,6 +29,34 @@
 
         <main>
 
+            <div class="rowButtons">
+                <div class="registeredDoctors">
+                    <a href="adminViewStaff.php">Registered doctors</a>
+                </div>
+
+                <div class="assignDocToPatient">
+                    <a href="adminViewStaff.php">Assign doctor to patient</a>
+                </div>
+            </div>
+
+            <div class="rowButtons">
+                <div class="upcomingAppointments">
+                    <a href="adminViewStaff.php">Upcoming patient appointments</a>
+                </div>
+
+                <div class="patientData">
+                    <a href="adminViewStaff.php">Patient Data</a>
+                </div>
+            </div>
+
+            <div class="rowButtons">
+                <div class="upcomingAppointments">
+                    <a href="adminViewStaff.php">Upcoming patient appointments</a>
+                </div>
+
+                
+            </div>
+                
 
 
         </main>
