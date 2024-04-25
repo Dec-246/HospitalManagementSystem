@@ -33,6 +33,12 @@
 
         </main>
     </div>
+
+    <div class="footer">
+        <?php
+        include("php/includes/footer.php");
+        ?>
+    </div>
 </body>
 
 </html>

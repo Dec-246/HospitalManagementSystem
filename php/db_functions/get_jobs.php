@@ -24,5 +24,3 @@ foreach($result as $row)
     echo($row["job_title"]."<br />");
 }
 
-?>
-

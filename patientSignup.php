@@ -64,6 +64,18 @@ include("php/includes/navbar.php");
     </head>
     <body>
         
+    <div class="navbarContainer">
+            <?php
+            include("php/includes/navbar.php");
+            ?>
+        </div>
+
+        <div class="header">
+            <?php
+            include("php/includes/header.php");
+            ?>
+        </div>
+
         <form action="" method="post">
             <div class="patientSignupForm">
                 <label for="username">Username:</label> <br>
@@ -121,5 +133,10 @@ include("php/includes/navbar.php");
 
         </form>
 
+        <div class="footer">
+        <?php
+        include("php/includes/footer.php");
+        ?>
+        </div>
     </body>
 </html>

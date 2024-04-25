@@ -50,7 +50,7 @@ if (isset($_POST['submit'])) {
     $stmt->close();
     $conn->close();
 
-    header('Location: createStaff.php');
+    header('Location: index.php');
     exit;
 }
 
@@ -63,7 +63,7 @@ if (isset($_POST['submit'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Create employee account</title>
     <link rel="stylesheet" href="css/global.css" type="text/css" />
 
     <link rel="stylesheet" href="css/mobile.css" type="text/css" media="only screen and (max-width : 607px)" />
@@ -87,7 +87,7 @@ if (isset($_POST['submit'])) {
             ?>
         </div>
         <main>
-            <form method="post" action="createStaffSQL.php">
+            <form method="post">
                 <div class="createStaffForm">
                     <input type="text" name="firstName" placeholder="firstName"><br>
                 </div>
@@ -125,11 +125,11 @@ if (isset($_POST['submit'])) {
                 </div>
 
                 <div class="createStaffForm">
-                    <input type="password" name="password_hash" placeholder="password_hash"><br><br>
+                    <input type="password" name="password_hash" placeholder="password"><br><br>
                 </div>
 
                 <div class="submitNewStaff">
-                    <button type="submit" name="submit">Submit</button>
+                    <button type="submit" value="submit">Submit</button>
                 </div>
             </form>
         </main>
