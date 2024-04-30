@@ -1,58 +1,8 @@
 <?php
 
-include_once("db_connect.php");
-include_once("hash_password.php");
+session_start();
 
-function create_user($firstName, $lastName, $phoneNumber, $email, $gender, $staffRole, $salary, $hireDate, $department_id, $password)
-{
-    $created = false;
-    $conn = makeConnection();
-    $password = hash_password($password);
-    $stmt = $conn->prepare("INSERT INTO staff (firstName, lastName, phoneNumber, email, gender, staffRole, salary, hireDate, department_id, password_hash) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param('ssssssssss', $firstName, $lastName, $phoneNumber, $email, $gender, $staffRole, $salary, $hireDate, $department_id, $staffPassword);
 
-    $stmt->execute();
-
-    //the logic
-    if ($stmt) {
-        $created = true;
-    }
-    $stmt->close();
-    $conn->close();
-
-    return $created;
-}
-
-if (isset($_POST['submit'])) {
-
-    $firstName = $_POST['firstName'];
-    $lastName = $_POST['lastName'];
-    $phoneNumber = $_POST['phoneNumber'];
-    $email = $_POST['email'];
-    $gender = $_POST['gender'];
-    $staffRole = $_POST['staffRole'];
-    $salary = $_POST['salary'];
-    $hireDate = $_POST['hireDate'];
-    $department_id = $_POST['department_id'];
-    $staffPassword = hash_password($_POST['password_hash']);
-
-    $conn = makeConnection();
-
-    $stmt = $conn->prepare("INSERT INTO staff (firstName, lastName, phoneNumber, email, gender, staffRole, salary, hireDate, department_id, staffPassword) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param('ssssssdsis', $firstName, $lastName, $phoneNumber, $email, $gender, $staffRole, $salary, $hireDate, $department_id, $staffPassword);
-
-    $stmt->execute();
-
-    //the logic
-    //if ($stmt) {
-    //    $created = true;
-    //}
-    $stmt->close();
-    $conn->close();
-
-    header('Location: index.php');
-    exit;
-}
 
 //create_user("Hello", "hello");
 ?>
@@ -87,7 +37,7 @@ if (isset($_POST['submit'])) {
             ?>
         </div>
         <main>
-            <form method="post">
+            <form action="php/admin/adminCreateStaffSQL.php" method="post" >
                 <div class="createStaffForm">
                     <input type="text" name="firstName" placeholder="firstName"><br>
                 </div>
@@ -125,7 +75,7 @@ if (isset($_POST['submit'])) {
                 </div>
 
                 <div class="createStaffForm">
-                    <input type="password" name="password_hash" placeholder="password"><br><br>
+                    <input type="password" name="password" placeholder="password"><br><br>
                 </div>
 
                 <div class="submitNewStaff">

@@ -1,7 +1,9 @@
 <?php
+session_start();
 
-include_once("db_connect.php");
+include "db_connect.php";
 
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 $firstName = $_POST['firstName'];
 $lastName = $_POST['lastName'];
 $phoneNumber = $_POST['phoneNumber'];
@@ -11,21 +13,30 @@ $staffRole = $_POST['staffRole'];
 $salary = $_POST['salary'];
 $hireDate = $_POST['hireDate'];
 $department_id = $_POST['department_id'];
-$staffPassword = hash_password($_POST['password_hash']);
+$staffPassword = ($_POST['password']);
+
+
+$hashed_password = password_hash($staffPassword, PASSWORD_DEFAULT);
 
 $conn = makeConnection();
 
+$created = false;
+
 $stmt = $conn->prepare("INSERT INTO staff (firstName, lastName, phoneNumber, email, gender, staffRole, salary, hireDate, department_id, staffPassword) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-$stmt->bind_param('ssssssdsis', $firstName, $lastName, $phoneNumber, $email, $gender, $staffRole, $salary, $hireDate, $department_id, $staffPassword);
+$stmt->bind_param('ssssssdsis', $firstName, $lastName, $phoneNumber, $email, $gender, $staffRole, $salary, $hireDate, $department_id, $hashed_password);
+
+
 
 $stmt->execute();
 
 //the logic
-//if ($stmt) {
-//    $created = true;
-//}
+if ($stmt) {
+   $created = true;
+}
 $stmt->close();
 $conn->close();
 
 header('Location: index.php');
 exit;
+
+}
