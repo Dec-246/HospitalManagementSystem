@@ -29,6 +29,28 @@
 
         <main role="main" class="pb-5">
 
+            <script>
+                // Get button
+                let mybutton = document.getElementById("myBtn");
+    
+                // When the user scrolls down by 20px from the top of the page, show 'scroll back to top' button
+                window.onscroll = function() {scrollFunction()};
+    
+                function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+                }
+    
+                // When user clicks on 'scroll back to top' button, scroll to top of the webpage
+                function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+                }
+            </script>
+
             <h1>Get in touch with us!</h1>
 
             <div class="contactUs">
