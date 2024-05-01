@@ -184,7 +184,9 @@ section{
 
 
 
-/* Admin */  
+/* Admin 
+-------------------------------------------------- */  
+
 /* Create staff page */
 
 .createStaffForm{
@@ -243,7 +245,9 @@ section{
 
 
 
-/* Patient */
+/* Patient 
+-------------------------------------------------- */
+
 /* Patient dashboard */
 .staffInfo{
   background-color: white;
@@ -304,4 +308,15 @@ section{
   border-radius: 10px;
   padding: 15px 32px;
   width: 200px;
+}
+
+/* Location page
+-------------------------------------------------- */
+.location{
+  color: white;
+  text-align: center;
+}
+.map{
+  margin: auto;
+  text-align: center;
 }

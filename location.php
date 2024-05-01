@@ -32,29 +32,44 @@
             <script>
                 // Get button
                 let mybutton = document.getElementById("myBtn");
-    
+
                 // When the user scrolls down by 20px from the top of the page, show 'scroll back to top' button
-                window.onscroll = function() {scrollFunction()};
-    
+                window.onscroll = function() {
+                    scrollFunction()
+                };
+
                 function scrollFunction() {
-                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                    mybutton.style.display = "block";
-                } else {
-                    mybutton.style.display = "none";
+                    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                        mybutton.style.display = "block";
+                    } else {
+                        mybutton.style.display = "none";
+                    }
                 }
-                }
-    
+
                 // When user clicks on 'scroll back to top' button, scroll to top of the webpage
                 function topFunction() {
-                document.body.scrollTop = 0;
-                document.documentElement.scrollTop = 0;
+                    document.body.scrollTop = 0;
+                    document.documentElement.scrollTop = 0;
                 }
             </script>
-            
+
             <div class="location">
+                <h1>
+                    Where are we based?
+                </h1><br><br>
+
+                <p><b>
+                        Below is an interactive map which allows you to see where our hospital is based. As well as this,
+                        you will also be able to see the surrounding locations to help you find where we are situated.
+                </p></b><br>
+
                 <p>
-                    Below is an interactive map which allows you to see where our hospital is based. As well as this, 
-                    you will also be able to see the surrounding locations to help you find where we are situated.
+                    As you can already see on the map, our hospital is based within the city centre.
+                    This means that it is easily accessible and easy to find! Despite this, please 
+                    <b>only</b> arrive in person if you either:
+
+                        <li>Have an appointment.</li>
+                        <li>Need urgent attention in the case of an emergency.</li>
                 </p>
             </div>
 
