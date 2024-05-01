@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include "db_connect.php";
+require_once('php/db_functions/db_connect.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 $firstName = $_POST['firstName'];

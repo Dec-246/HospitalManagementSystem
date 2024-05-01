@@ -2,6 +2,7 @@
 
 session_start();
 
+    require_once('php/db_functions/db_connect.php');
 
 
 //create_user("Hello", "hello");
@@ -38,6 +39,7 @@ session_start();
         </div>
         <main>
 
+            <!-- code for scroll back to top button -->
             <script>
                 // Get button
                 let mybutton = document.getElementById("myBtn");
@@ -60,7 +62,7 @@ session_start();
                 }
             </script>
 
-            <form action="php/admin/adminCreateStaffSQL.php" method="post" >
+            <form action="php/admin/adminCreateStaffSQL.php" method="POST" >
                 <div class="createStaffForm">
                     <input type="text" name="firstName" placeholder="firstName"><br>
                 </div>

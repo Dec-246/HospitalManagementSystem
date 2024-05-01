@@ -10,3 +10,13 @@
     margin: auto;
     max-width: 1350px;   
 }
+
+/* section{
+    flex-direction: row;
+    gap:50px;
+    margin: auto;
+    max-width: 580px;
+}
+section>div{
+    flex: 1 1 50%;
+} */

@@ -125,23 +125,63 @@ a.navbar-brand {
 -------------------------------------------------- */
 
 .homePageTitle{
-    color: #fff;
-    margin-bottom: 50px;
-  }
-  .homePageIntro{
-    color: #fff;  
-  }
-  .homepageImage{
-    padding: 20px;
-    width: fit-content;
-  }
-  .emergencyContactHome{
-    width: 300px;
-    background-color: #e5e5e5;
-    padding: 20px;
-    margin: auto;
+  color: #fff;
+  margin-bottom: 50px;
+  padding-top: 30px;
+}
+.homePageIntro{
+  color: #fff;  
+}
+
+.emergencyContactHome{
+  width: 350px;
+  background-color: #e5e5e5;
+  padding: 20px;
+  margin: auto;
+  text-align: center;
+}
+
+/* aligning columns in centre of page in unison */
+section{
+  margin: auto;
+  text-align: center;
+}
+
+
+
+.column{
+  padding-top: 50px;
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 150px;
+  color: black;
+}
+.cColour{
+  background-color: white;
+  border-radius: 20px;
+  padding: 10px 10px 5px 10px;
+}
+
+/* clear floats after columns */
+.threeColumn::after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* turns paragraph columns into a column when website in mobile view */
+@media screen and (max-width:620px) {
+  .column {
+    width: 100%;
     text-align: center;
+    margin: auto;
   }
+
+}
+
+
+
 
 
 /* Admin */  
