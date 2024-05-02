@@ -1,8 +1,11 @@
-<footer class="border-top footer text-muted">
-    <div class="container">
-        &copy; September 2024 - Cantor Hospital Care
-    </div>
-</footer>
+<body>
+  <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; September 2024 - Cantor Hospital Care
+        </div>
+    </footer>  
+</body>
+
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->

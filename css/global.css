@@ -24,6 +24,7 @@ a.navbar-brand {
     background-color: #689C54;
   }
 
+/* scroll back to top button */
   #myBtn {
     display: none;
     position: fixed;
@@ -84,9 +85,16 @@ a.navbar-brand {
     /* Margin bottom by footer height */
     margin-bottom: 60px;
     position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
   .footer {
-    position: sticky;
+    position: relative;
+    margin-top: auto;
+    height: 50px;
+    clear: both;
+    padding-bottom: 50px;
     bottom: 0;
     width: 100%;
     white-space: nowrap;
@@ -249,7 +257,7 @@ section{
 }
 
 /* Admin dashboard */
-.rowButtons{
+/* .rowButtons{
   display: flex;
   flex-direction: row;
 }
@@ -294,9 +302,50 @@ section{
   border-radius: 10px;
   padding: 15px 32px;
   width: 200px;
+} */
+
+
+
+/* turns paragraph columns into a column when website in mobile view */
+@media screen and (max-width:620px) {
+  .adminDashboard {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+  }
+
 }
 
+.adminDashboard{
+  padding-top: 50px;
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 150px;
+  color: black;
+  padding-bottom: 20px;
+}
 
+.adminDashboardBelow{
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 150px;
+  color: black;
+
+}
+.ADcolour{
+  background-color: white;
+  border-radius: 20px;
+  padding: 10px 10px 5px 10px;
+}
+
+/* clear floats after columns */
+.adminDashboard::after{
+  content: "";
+  display: table;
+  clear: both;
+}
 
 /* Patient 
 -------------------------------------------------- */

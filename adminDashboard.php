@@ -51,33 +51,40 @@
                 }
             </script>        
 
-            <div class="rowButtons">
-                <div class="registeredDoctors">
-                    <a href="adminViewStaff.php">Registered doctors</a>
+            <section>
+                <div class="adminDashboard">
+                    <div class="ADcolour">
+                        <a href="adminViewStaff.php">Registered doctors</a>
+                    </div><br><Br>
+    
+                    <div class="ADcolour">
+                        <a href="adminViewStaff.php">Assign doctor to patient</a>
+                    </div><br><br>
                 </div>
+            </section>
 
-                <div class="assignDocToPatient">
-                    <a href="adminViewStaff.php">Assign doctor to patient</a>
-                </div>
-            </div>
 
-            <div class="rowButtons">
-                <div class="upcomingAppointments">
-                    <a href="adminViewStaff.php">Upcoming patient appointments</a>
-                </div>
-
-                <div class="patientData">
-                    <a href="adminViewStaff.php">Patient Data</a>
-                </div>
-            </div>
-
-            <div class="rowButtons">
-                <div class="upcomingAppointments">
-                    <a href="adminCreateStaff.php">Register new staff member</a>
-                </div>
-
+            <section>
+                <div class="adminDashboard">
+                    <div class="ADcolour">
+                        <a href="adminViewStaff.php">Patient Data</a>
+                    </div><br><Br>
                 
-            </div>
+                    <div class="ADcolour">
+                        <a href="adminViewStaff.php">Upcoming patient appointments</a>
+                    </div>
+                
+                </div>
+            </section><br><br>
+            
+
+            <section>
+                <div class="adminDashboardBelow">
+                    <div class="ADcolour">
+                        <a href="adminCreateStaff.php">Register new staff member</a>
+                    </div>
+                </div>
+            </section>
                 
 
 

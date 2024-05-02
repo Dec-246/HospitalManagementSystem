@@ -81,34 +81,34 @@
 
                 <a href="">
                     <section>
-                    <div class="column">
-                        <div class="cColour">
-                            <p>
-                            If you are struggling with you mental health and need somebody to speak to,
-                            please click <b>*HERE*</b> and it will redirect you to a page which provides all 
-                            of our best tips of how to manage any stress and anxiety that you may be 
-                            suffering from.
+                        <div class="column">
+                            <div class="cColour">
+                                <p>
+                                If you are struggling with you mental health and need somebody to speak to,
+                                please click <b>*HERE*</b> and it will redirect you to a page which provides all 
+                                of our best tips of how to manage any stress and anxiety that you may be 
+                                suffering from.
 
-                            Remember. Never suffer alone.
-                            </p>
-                        </div><br><br>
-                        
-        
-                    </div>
+                                Remember. Never suffer alone.
+                                </p>
+                            </div><br><br>
+                            
+            
+                        </div>
                     </section> 
                 </a>  
                     
                 <a href="">
                    <section>
-                    <div class="column">
-                        <div class="cColour">
-                            <p>
-                                If you may be experiencing symptoms of a potential illness and you aren't quite
-                                sure what it might be, click <b>*HERE*</b> and it will redirect you to a page made specially
-                                for narrowing down what the problem might be.
-                            </p>
-                        </div><br><br>
-                    </div>
+                        <div class="column">
+                            <div class="cColour">
+                                <p>
+                                    If you may be experiencing symptoms of a potential illness and you aren't quite
+                                    sure what it might be, click <b>*HERE*</b> and it will redirect you to a page made specially
+                                    for narrowing down what the problem might be.
+                                </p>
+                            </div><br><br>
+                        </div>
                     </section> 
                 </a>
                 
@@ -126,7 +126,6 @@
                                 AND CONTACT A DOCTOR.</b>
                             </p>
                             </div>
-                            
                         </div>
                     </section>
                 </a>
@@ -142,7 +141,4 @@
     </div>
 
 </body>
-
-
-
 </html>
