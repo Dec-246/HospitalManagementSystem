@@ -36,7 +36,7 @@ if ($stmt) {
 $stmt->close();
 $conn->close();
 
-header('Location: index.php');
+header('Location: adminDashboard.php');
 exit;
 
 }

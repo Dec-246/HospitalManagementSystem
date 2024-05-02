@@ -73,7 +73,7 @@
 
             <div class="rowButtons">
                 <div class="upcomingAppointments">
-                    <a href="adminViewStaff.php">Upcoming patient appointments</a>
+                    <a href="adminCreateStaff.php">Register new staff member</a>
                 </div>
 
                 

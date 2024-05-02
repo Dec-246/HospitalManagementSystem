@@ -62,7 +62,9 @@ session_start();
                 }
             </script>
 
-            <form action="php/admin/adminCreateStaffSQL.php" method="POST" >
+            <!--form action= php/admin/adminCreateStaffSQL.php -->
+
+            <form action="adminCreateStaffSQL.php" method="POST" >
                 <div class="createStaffForm">
                     <input type="text" name="firstName" placeholder="firstName"><br>
                 </div>
