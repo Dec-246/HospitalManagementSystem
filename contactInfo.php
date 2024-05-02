@@ -51,10 +51,13 @@
                 }
             </script>
 
-            <h1>Get in touch with us!</h1>
+            <div class="contactTitle">
+                <h1>Get in touch with us!</h1>
+            </div>
+            
 
             <div class="contactUs">
-                <p>Down below we have left a list of contacts for you to get in touch with us if you have
+                <br><p>Down below we have left a list of contacts for you to get in touch with us if you have
                     any questions or concerns. Please contact emergency services if you have any immediate problems.
 
                     Please do not hesitate to call us. we have several numbers for different services.
@@ -62,19 +65,19 @@
 
                 <p>Please be aware that these contacts are contact numbers for citizens within the UK only.
                     If you are outside of the UK and attempting to contact these numbers, you may have to pay a standard fee.
-                </p>
+                </p><br>
             </div>
 
             <div class="EMERGENCY">
-                <h2>If you are in an urgent emergency, please CALL <a href="tel: --999"> 999</a> IMMEDIATELY! </h2>
+                <br><h2>If you are in an urgent emergency, please CALL <a href="tel: --999"> 999</a> IMMEDIATELY! </h2>
 
-                <p> If you are in a dangerous situation where life is at risk, please DO NOT HESITATE to call our emergency
-            </div>
+                <p> If you are in a dangerous situation where life is at risk, please DO NOT HESITATE to call our emergency</p><br>
+            </div><br><br>
 
             <div class="contactNumbers">
 
                 <div class="emergencyNumber">
-                    <ul>
+                    <br><ul>
                         <li>Emergency services: <a href="tel: --999"> 999</a></li><br>
 
                         <li>Non emergency services: <a href="tel: --111"> 111</a></li></ul>

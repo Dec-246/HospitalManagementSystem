@@ -147,8 +147,6 @@ section{
   text-align: center;
 }
 
-
-
 .column{
   padding-top: 50px;
   float: left;
@@ -181,6 +179,48 @@ section{
 }
 
 
+/* Location page
+-------------------------------------------------- */
+.location{
+  color: white;
+  text-align: center;
+}
+.map{
+  margin: auto;
+  text-align: center;
+}
+
+/* Contact Info page
+-------------------------------------------------- */
+
+.contactTitle{
+  color: white;
+  margin: auto;
+  text-align: center;
+}
+.contactUs{
+  color: white;
+  margin: auto;
+  text-align: center;
+  width: 75%;
+}
+.EMERGENCY{
+  color: white;
+  margin: auto;
+  text-align: center;
+  width: 75%;
+  height: 150px;
+  background-color: red;
+  border-radius: 50px;
+}
+.contactNumbers{
+  margin: auto;
+  text-align: center;
+  width: 25%;
+  background-color: white;
+  padding-bottom: 20px;
+  border-radius: 35px;
+}
 
 
 
@@ -308,15 +348,4 @@ section{
   border-radius: 10px;
   padding: 15px 32px;
   width: 200px;
-}
-
-/* Location page
--------------------------------------------------- */
-.location{
-  color: white;
-  text-align: center;
-}
-.map{
-  margin: auto;
-  text-align: center;
 }
