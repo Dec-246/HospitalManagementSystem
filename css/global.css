@@ -222,6 +222,19 @@ section{
   border-radius: 35px;
 }
 
+/* How to become a member page
+-------------------------------------------------- */
+
+.memberTitle{
+  color: white;
+  margin: auto;
+  text-align: center;
+}
+.memberIntro{
+  color: white;
+  margin: auto;
+  text-align: center;
+}
 
 
 /* Admin 

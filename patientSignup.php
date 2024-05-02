@@ -76,62 +76,65 @@ include("php/includes/navbar.php");
             ?>
         </div>
 
-        <form action="" method="post">
-            <div class="patientSignupForm">
-                <label for="username">Username:</label> <br>
-                <input type="text" id="username"name="username" required><br>
-            </div>
+        <main>
 
-            <div class="patientSignupForm">
-                <label for="password">Password:</label> <br>
-                <input type="password" id="password" name="password" required><br>
-            </div>
-
-            <div class="patientSignupForm">
-                <label for="firstName">First name:</label> <br>
-                <input type="text" id="firstName" name="firstName" required><br>  
-            </div>
-            
-            <div class="patientSignupForm">
-                <label for="lastName">last name:</label> <br>
-                <input type="text" id="lastName" name="lastName" required><br>  
-            </div>
-            
-            <div class="patientSignupForm">
-                <label for="email">Email:</label> <br>
-                <input type="email" id="email" name="email" required><br> 
-            </div>
-            
-            <div class="patientSignupForm">
-                <label for="phoneNumber">Phone number:</label> <br>
-                <input type="text" id="phoneNumber" name="phoneNumber" required><br>  
-            </div>
-            
-            <div class="patientSignupForm">
-                <label for="dateOfBirth">Date of birth:</label> <br>
-                <input type="date" id="dateOfBirth" name="dateOfBirth" required><br> 
-            </div>
-            
-            <div class="patientSignupForm">
-                <label for="gender">Gender:</label> <br>
-                <input type="text" id="gender" name="gender" required><br>    
-            </div>
-            
-            <div class="patientSignupForm">
-                <label for="postCode">Post code:</label> <br>
-                <input type="char" id="postCode" name="postCode" required><br>   
-            </div>
-            
-            <div class="patientSignupForm">
-                <label for="address_">Address:</label> <br>
-                <input type="varchar" id="address_" name="address_" required><br><br>    
-            </div>
-            
-            <div class="patientSignupFormButton">
-                <input type="submit" value="Sign-up" name="submit">
-            </div>
-
-        </form>
+            <form action="" method="post">
+                <div class="patientSignupForm">
+                    <label for="username">Username:</label> <br>
+                    <input type="text" id="username"name="username" required><br>
+                </div>
+    
+                <div class="patientSignupForm">
+                    <label for="password">Password:</label> <br>
+                    <input type="password" id="password" name="password" required><br>
+                </div>
+    
+                <div class="patientSignupForm">
+                    <label for="firstName">First name:</label> <br>
+                    <input type="text" id="firstName" name="firstName" required><br>  
+                </div>
+                
+                <div class="patientSignupForm">
+                    <label for="lastName">last name:</label> <br>
+                    <input type="text" id="lastName" name="lastName" required><br>  
+                </div>
+                
+                <div class="patientSignupForm">
+                    <label for="email">Email:</label> <br>
+                    <input type="email" id="email" name="email" required><br> 
+                </div>
+                
+                <div class="patientSignupForm">
+                    <label for="phoneNumber">Phone number:</label> <br>
+                    <input type="text" id="phoneNumber" name="phoneNumber" required><br>  
+                </div>
+                
+                <div class="patientSignupForm">
+                    <label for="dateOfBirth">Date of birth:</label> <br>
+                    <input type="date" id="dateOfBirth" name="dateOfBirth" required><br> 
+                </div>
+                
+                <div class="patientSignupForm">
+                    <label for="gender">Gender:</label> <br>
+                    <input type="text" id="gender" name="gender" required><br>    
+                </div>
+                
+                <div class="patientSignupForm">
+                    <label for="postCode">Post code:</label> <br>
+                    <input type="char" id="postCode" name="postCode" required><br>   
+                </div>
+                
+                <div class="patientSignupForm">
+                    <label for="address_">Address:</label> <br>
+                    <input type="varchar" id="address_" name="address_" required><br><br>    
+                </div>
+                
+                <div class="patientSignupFormButton">
+                    <input type="submit" value="Sign-up" name="submit">
+                </div>
+    
+            </form>
+        </main>
 
         <div class="footer">
         <?php

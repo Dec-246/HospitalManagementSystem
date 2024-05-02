@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>How to become a member</title>
     <link rel="stylesheet" href="css/global.css" type="text/css" />
 
     <link rel="stylesheet" href="css/mobile.css" type="text/css" media="only screen and (max-width : 607px)" />
@@ -51,6 +51,27 @@
                 }
             </script>
 
+            <div class="memberTitle">
+                <h1><b>How to become a member with us</b></h1>
+            </div>
+            
+
+            <div class="memberIntro">
+                <p>
+                    we have created this page to show how you could possibly become a member of our 
+                    hospital if you are not already. <br><br>
+
+                    So it is a very simple and straight-forward process. You simply just click <a href="patientSignup.php"> *HERE*</a> 
+                    and you will be taken to our sign-up page. After you have created an account with us,
+                    your details will be entered into our database, which means you would be a member immediately. <br><br>
+
+                    After becoming a member, this means that you will become custom to the services and help that we offer.
+                    This is as well as gaining access to immiate care and attention if you need to be seen to urgently. <br><br>
+
+                    Our hospital offers a 5* service and a high quality treatment compared to other hospital services out there.
+
+                </p>
+            </div><br><br>
 
         </main>
     </div>
