@@ -4,8 +4,6 @@ session_start();
 
     require_once('php/db_functions/db_connect.php');
 
-
-//create_user("Hello", "hello");
 ?>
 
 <!DOCTYPE html>

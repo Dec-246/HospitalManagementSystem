@@ -1,8 +1,6 @@
-<?php
-include("php/includes/navbar.php");
-?>
-<?php
-    // begin database connection
+
+
+    <!-- // begin database connection
     $conn = 'php/config.php';
     $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -45,7 +43,15 @@ include("php/includes/navbar.php");
         $stmt->bind_param(':address_', $address_);
 
         echo "You have succesfully made an account!";
-    }
+    } -->
+
+    <?php
+
+    session_start();
+
+    require_once('php/db_functions/db_connect.php');
+
+
 ?>
 
 <!DOCTYPE html>
@@ -62,6 +68,7 @@ include("php/includes/navbar.php");
         <link rel="stylesheet" href="css/desktop.css" type="text/css" media="only screen and (min-width : 608px)" />
 
     </head>
+
     <body>
         
     <div class="navbarContainer">
@@ -76,9 +83,33 @@ include("php/includes/navbar.php");
             ?>
         </div>
 
+        <!-- scroll to top button -->
+        <script>
+            // Get button
+            let mybutton = document.getElementById("myBtn");
+        
+            // When the user scrolls down by 20px from the top of the page, show 'scroll back to top' button
+            window.onscroll = function() {scrollFunction()};
+        
+            function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+            } else {
+            mybutton.style.display = "none";
+            }
+            }
+        
+            // When user clicks on 'scroll back to top' button, scroll to top of the webpage
+            function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+            }
+        </script>
+
         <main>
 
-            <form action="" method="post">
+            <form action="patientSignupSQL.php" method="POST">
+                
                 <div class="patientSignupForm">
                     <label for="username">Username:</label> <br>
                     <input type="text" id="username"name="username" required><br>

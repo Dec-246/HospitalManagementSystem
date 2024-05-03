@@ -411,3 +411,16 @@ section{
   padding: 15px 32px;
   width: 200px;
 }
+
+/* Patient signup */
+
+.patientSignupForm{
+  padding-bottom: 20px;
+  margin: auto;
+  text-align: center;
+}
+.patientSignupFormButton{
+  padding-bottom: 20px;
+  margin: auto;
+  text-align: center;
+}

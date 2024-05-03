@@ -16,7 +16,7 @@
         $stmt = $conn->prepare("INSERT INTO hashed_password, salt FROM users WHERE username = :username");
         $stmt->bind_param(':username', $username);
         $stmt->execute();
-        $result = $stmt->fetch(mysqli::FETCH_ASSOC);
+        $result = $stmt->fetch(mysqli::fetch_assoc());
 
         if ($result) {
              $hashed_password = hash('sha26', $password . $result['salt']);
