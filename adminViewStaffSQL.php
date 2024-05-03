@@ -1,21 +1,26 @@
 <?php
-function getStaff()
-{
-    require_once('php/db_functions/db_connect.php');
+// function getStaff()
+
+    // require_once('php/db_functions/db_connect.php');
 
     $sql = 'SELECT staff.ID, CONCAT(staff.firstName," ",staff.lastName) AS "Name", 
-    CONCAT (staff.phoneNumber," ",staff.email) AS "Contact",
+    CONCAT (staff.phoneNumber," | ",staff.email) AS "Contact",
     staff.staffRole, staff.salary, staff.hireDate FROM staff';
 
 
 $result = mysqli_query($conn, $sql);
-$arrayResult = array(); //Initialize the array
-while ($row = mysqli_fetch_assoc($result)) { 
-//while ($row = $result->fetch_assoc()) { //previous code for above
-    $arrayResult[] = $row; 
+$staff = array(); //Initialize the array
+while ($row = mysqli_fetch_assoc($result)) {
+
+    //while ($row = $result->fetch_assoc()) { //previous code for above
+    $staff[] = $row; 
 }
-return $arrayResult;
-}
+// return $arrayResult;
+
+
+
+
+
 
 
 //  *FROM EXAMPLE*

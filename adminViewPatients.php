@@ -1,7 +1,7 @@
 <?php
 // ini_set("display_errors",1); //1= true // 0= false
 include("config.php"); // use the config file instead of db_connect
-include_once('adminViewStaffSQL.php');
+include_once('adminViewPatientsSQL.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -39,7 +39,7 @@ include_once('adminViewStaffSQL.php');
 
 
             <div class="container pb-5">
-                <h2>List of Employees</h2><br>
+                <h2>List of Patients</h2><br>
             </div>
 
             <div class="row">
@@ -47,25 +47,27 @@ include_once('adminViewStaffSQL.php');
                     <table class="table table-striped">
 
                         <thead class="table-dark">
-                            <td>Employee ID</td>
-                            <td>Employee Name</td>
+                            <td>Patient ID</td>
+                            <td>Patient Name</td>
                             <td>Contact</td>
-                            <td>Staff role</td>
-                            <td>Salary</td>
-                            <td>Hire date</td>
+                            <td>Address</td>
+                            <td>Asserted Doctor</td>
+                            <td>Date of Birth</td>
+                            <td>Gender</td>
                         </thead>
 
-                        <?php for ($i = 0; $i < count($staff); $i++) : ?>
+                        <?php for ($i = 0; $i < count($patient); $i++) : ?>
 
                             <tr>
-                                <td><?php echo $staff[$i]['ID'] ?></td>
-                                <td><?php echo $staff[$i]['Name'] ?></td>
-                                <td><?php echo $staff[$i]['Contact'] ?></td>
-                                <td><?php echo $staff[$i]['staffRole'] ?></td>
-                                <td><?php echo $staff[$i]['salary'] ?></td>
-                                <td><?php echo $staff[$i]['hireDate'] ?></td>
+                                <td><?php echo $patient[$i]['ID'] ?></td>
+                                <td><?php echo $patient[$i]['Name'] ?></td>
+                                <td><?php echo $patient[$i]['Contact'] ?></td>
+                                <td><?php echo $patient[$i]['Address'] ?></td>
+                                <td><?php echo $patient[$i]['assertedDoctor'] ?></td>
+                                <td><?php echo $patient[$i]['dateOfBirth'] ?></td>
+                                <td><?php echo $patient[$i]['gender'] ?></td>
 
-                                <td><a href="updateStaff.php?ID=<?php echo $staff[$i]['ID']; ?>">Update</a></td>			
+                                <td><a href="updatePatient.php?ID=<?php echo $patient[$i]['ID']; ?>">Update</a></td>			
                                 
                             </tr>
                         <?php endfor; ?>
