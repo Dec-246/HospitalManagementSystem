@@ -117,6 +117,12 @@ a.navbar-brand {
   .container {
     min-height: 100%;
   }
+  /* Tables for users viewing data
+-------------------------------------------------- */
+.row{
+  margin: auto;
+  text-align: center;
+}
 
   /* Home page
 -------------------------------------------------- */
