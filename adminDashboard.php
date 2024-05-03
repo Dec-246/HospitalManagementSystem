@@ -58,7 +58,7 @@
                     </div><br><Br>
     
                     <div class="ADcolour">
-                        <a href="">Assign doctor to patient</a>
+                        <a href="adminViewPatients.php">Assign doctor to patient</a>
                     </div><br><br>
                 </div>
             </section>

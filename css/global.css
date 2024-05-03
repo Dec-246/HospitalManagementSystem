@@ -430,3 +430,15 @@ section{
   margin: auto;
   text-align: center;
 }
+
+/* Staff
+-------------------------------------------------- */
+.staffSchedule{
+  margin: auto;
+  text-align: center;
+  width: 100%;
+  
+}
+.Schedule{
+  width: 100%;
+}

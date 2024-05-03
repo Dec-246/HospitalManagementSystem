@@ -9,6 +9,15 @@
     CONCAT (patient.registeredDoctor," | ",patient.assignedStaffID) AS "assertedDoctor",
     patient.dateOfBirth, patient.gender FROM patient';
 
+    // $sql = 'UPDATE patient SET Contact = $contact WHERE ID = $ID';
+
+    // $sql = "UPDATE patient SET 'Name' = $Name WHERE ID = $ID";
+    // $sql = "UPDATE patient SET 'Contact' = $Contact WHERE ID = $ID";
+    // $sql = "UPDATE patient SET 'Address' = $Address WHERE ID = $ID";
+    // $sql = "UPDATE patient SET 'assertedDoctor' = $assertedDoctor WHERE ID = $ID";
+    // $sql = "UPDATE patient SET 'dateOfBirth' = $dateOfBirth WHERE ID = $ID";
+    // $sql = "UPDATE patient SET 'gender' = $gender WHERE ID = $ID";
+
 // $sql = 'UPDATE patient.ID, CONCAT(patient.firstName," ",patient.lastName) AS "Name", 
 // CONCAT (patient.phoneNumber," | ",patient.email) AS "Contact",
 // CONCAT (patient.postCode," | ",patient.address_) AS "Address",
