@@ -67,11 +67,11 @@
             <section>
                 <div class="adminDashboard">
                     <div class="ADcolour">
-                        <a href="">Patient Data</a>
+                        <a href="adminViewPatients.php">Patient Data</a>
                     </div><br><Br>
                 
                     <div class="ADcolour">
-                        <a href="">Upcoming patient appointments</a>
+                        <a href="adminViewAppointment.php">Upcoming patient appointments</a>
                     </div>
                 
                 </div>
