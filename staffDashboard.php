@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Staff dashboard</title>
         <link rel="stylesheet" href="css/global.css" type="text/css" />
 
         <link rel="stylesheet" href="css/mobile.css" type="text/css" media="only screen and (max-width : 607px)" />
@@ -57,7 +57,7 @@
                     </div>
 
                     <div class="listOfAssertedPatients">
-                        <a href="">Patients</a>
+                        <a href="staffViewPatients.php">Patients data</a>
                     </div>
                 </div>
 
@@ -73,11 +73,11 @@
 
                 <div class="rowButtons">
                     <div class="patientLabResults">
-                        <a href="">Patient Lab test Results</a>
+                        <a href="staffViewResults.php">Patient Lab test Results</a>
                     </div>
 
                     <div class="patientBookings">
-                        <a href="">Patient bookings</a>
+                        <a href="staffViewBookings.php">Patient bookings</a>
                     </div>
                 </div>
 

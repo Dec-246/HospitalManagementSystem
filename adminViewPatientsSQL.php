@@ -3,11 +3,13 @@
 
     // require_once('php/db_functions/db_connect.php');
 
-    $sql = 'SELECT patient.ID, CONCAT(patient.firstName," ",patient.lastName) AS "Name", 
+    $sql = 'SELECT patient.ID, CONCAT(patient.firstName," ",patient.lastName) AS "Name_", 
     CONCAT (patient.phoneNumber," | ",patient.email) AS "Contact",
-    CONCAT (patient.postCode," | ",patient.address_) AS "Address",
+    CONCAT (patient.postCode," | ",patient.address_) AS "Address_",
     CONCAT (patient.registeredDoctor," | ",patient.assignedStaffID) AS "assertedDoctor",
     patient.dateOfBirth, patient.gender FROM patient';
+
+
 
     // $sql = 'UPDATE patient SET Contact = $contact WHERE ID = $ID';
 

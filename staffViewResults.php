@@ -25,7 +25,7 @@ include_once('staffViewResultsSQL.php');
 
             <div class="navbarContainer">
                 <?php
-                    include("php/includes/admin/navbar.php");
+                    include("php/includes/staff/navbar.php");
                 ?>
             </div>
 

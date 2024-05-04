@@ -1,8 +1,7 @@
 <?php
- //ini_set("display_errors",1); //1= true // 0= false
+ini_set("display_errors",1);
 include("config.php"); // use the config file instead of db_connect
-include_once('adminViewPatientsSQL.php');
-
+include_once('adminViewAppointmentSQL.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +9,7 @@ include_once('adminViewPatientsSQL.php');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>View patients</title>
+    <title>View staff</title>
     <link rel="stylesheet" href="css/global.css" type="text/css" />
 
     <link rel="stylesheet" href="css/mobile.css" type="text/css" media="only screen and (max-width : 620px)" />
@@ -26,7 +25,7 @@ include_once('adminViewPatientsSQL.php');
 
             <div class="navbarContainer">
                 <?php
-                    include("php/includes/admin/navbar.php");
+                    include("php/includes/staff/navbar.php");
                 ?>
             </div>
 
@@ -40,7 +39,7 @@ include_once('adminViewPatientsSQL.php');
 
 
             <div class="container pb-5">
-                <h2>List of Patients</h2><br>
+                <h2>Patient bookings</h2><br>
             </div>
 
             <div class="row">
@@ -48,28 +47,25 @@ include_once('adminViewPatientsSQL.php');
                     <table class="table table-striped">
 
                         <thead class="table-dark">
-                            <td>Patient ID</td>
-                            <td>Patient Name</td>
-                            <td>Contact</td>
-                            <td>Address</td>
-                            <td>Asserted Doctor</td>
-                            <td>Date of Birth</td>
-                            <td>Gender</td>
+                            <td>Appointment ID</td>
+                            <td>Appointment Date/Time</td>
+                            <td>Subject</td>
+                            <td>Patient name</td>
+                            <td>Staff name</td>
                         </thead>
 
-                        <?php for ($i = 0; $i < count($patient); $i++) : ?>
+                        <?php for ($i = 0; $i < count($appointment); $i++) : ?>
 
                             <tr>
-                                <td><?php echo $patient[$i]['ID'] ?></td>
-                                <td><?php echo $patient[$i]['Name_'] ?></td>
-                                <td><?php echo $patient[$i]['Contact'] ?></td>
-                                <td><?php echo $patient[$i]['Address_'] ?></td>
-                                <td><?php echo $patient[$i]['assertedDoctor'] ?></td>
-                                <td><?php echo $patient[$i]['dateOfBirth'] ?></td>
-                                <td><?php echo $patient[$i]['gender'] ?></td>
+                                <td><?php echo $appointment[$i]['ID'] ?></td>
+                                <td><?php echo $appointment[$i]['dateTime'] ?></td>
+                                <td><?php echo $appointment[$i]['subject'] ?></td>
+                                <td><?php echo $appointment[$i]['patientName'] ?></td>
+                                <td><?php echo $appointment[$i]['staffName'] ?></td>
 
-                                <td><a href="adminUpdatePatient.php?assertedDoctor=<?php echo $patient[$i]['assertedDoctor']; ?>">Update</a></td>			
-                                <!-- updatePatient.php?ID --- PREVIOUS  -->
+
+                                <td><a href="updateAppointment.php?ID=<?php echo $appointment[$i]['ID']; ?>">Update</a></td>			
+                                
                             </tr>
                         <?php endfor; ?>
                     </table>

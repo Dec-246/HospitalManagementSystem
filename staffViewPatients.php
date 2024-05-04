@@ -1,6 +1,5 @@
 <?php
- //ini_set("display_errors",1); //1= true // 0= false
-include("config.php"); // use the config file instead of db_connect
+include("config.php"); 
 include_once('adminViewPatientsSQL.php');
 
 ?>
@@ -26,7 +25,7 @@ include_once('adminViewPatientsSQL.php');
 
             <div class="navbarContainer">
                 <?php
-                    include("php/includes/admin/navbar.php");
+                    include("php/includes/staff/navbar.php");
                 ?>
             </div>
 

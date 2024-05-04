@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Patient dashboard</title>
     <link rel="stylesheet" href="css/global.css" type="text/css" />
 
     <link rel="stylesheet" href="css/mobile.css" type="text/css" media="only screen and (max-width : 607px)" />
@@ -17,7 +17,7 @@
     <div class="container">
         <div class="navbarContainer">
             <?php
-            include("php/includes/navbar.php");
+            include("php/includes/patient/navbar.php");
             ?>
         </div>
 
@@ -54,22 +54,22 @@
             <h1>Hello: <?php echo '(patient.$firstName, patient.lastName)';?></h1>
             
             <div class="rowButtons">
-                <div class="staffInfo">
+                <div class="patientInfo">
                     <a href="">Personal Info</a>
                 </div>
 
-                <div class="listOfAssertedPatients">
-                    <a href="">Patients</a>
+                <div class="staffInfo">
+                    <a href="">Doctors Info</a>
                 </div>
             </div>
 
             <div class="rowButtons">
-                <div class="staffNotes">
-                    <a href="">Notes</a>
+                <div class="doctorNotes">
+                    <a href="">Doctors Notes</a>
                 </div>
 
-                <div class="staffSchedule">
-                    <a href="">Schedule</a>
+                <div class="pastAppointments">
+                    <a href="">Past appointments</a>
                 </div>
             </div>
 
@@ -78,11 +78,20 @@
                     <a href="">Patient Lab test Results</a>
                 </div>
 
-                <div class="rowButtons">
-                    <a href="">Patient bookings</a>
+                <div class="bookAppointment">
+                    <a href="patientBookAppointment.php">Book appointment</a>
                 </div>
             </div>
                 
+            <div class="rowButtons">
+                <div class="patientLabResults">
+                    <a href="">Treatment</a>
+                </div>
+
+                <div class="rowButtons">
+                    <a href="">Prescription</a>
+                </div>
+            </div>
 
 
         </main>

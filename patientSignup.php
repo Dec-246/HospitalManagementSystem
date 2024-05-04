@@ -47,8 +47,8 @@
 
     <?php
 
+    ini_set("display_errors",1);
     session_start();
-
     require_once('php/db_functions/db_connect.php');
 
 
@@ -117,7 +117,7 @@
     
                 <div class="patientSignupForm">
                     <label for="password">Password:</label> <br>
-                    <input type="password" id="password" name="password" required><br>
+                    <input type="password" id="password" name="patientPassword" required><br>
                 </div>
     
                 <div class="patientSignupForm">

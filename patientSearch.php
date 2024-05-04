@@ -2,16 +2,25 @@
 <?php 
 ini_set("display_errors",1);
 include("config.php");
-$searchQuery = $_GET['q'] ?? null;
+
+if(isset($_GET[ 'q'])) {
+    $searchQuery = $_GET['q'];
+} else {
+    $searchQuery = null;
+}
+
+
 if (is_null($searchQuery) || empty($searchQuery)) {
     $validSearch = false;
 } else {
     $validSearch = true;
 
     $searchQuery = "%" . $searchQuery ."%";
+
 // query by patients first name
-$stmt = $mysqli->prepare("SELECT * FROM patients WHERE ('firstName LIKE ?");
-$stmt->bind_param("s", $searchQuery);
+$stmt = $conn->prepare("SELECT * FROM patient WHERE 'firstName' AND 'lastName' LIKE '?, ?' ");
+
+$stmt->bind_param("ss", $searchQuery, $searchQuery);
 $stmt->execute();
 $result = $stmt->get_result();
 }
@@ -50,7 +59,7 @@ $result = $stmt->get_result();
             </div>
 
             <div class="container pb-5">
-                <h2></h2><br>
+                <h2>Search for Patient</h2><br>
             </div>
 
             <div>
@@ -66,9 +75,9 @@ $result = $stmt->get_result();
                 </form>
             </div>
 
-            <?php
+            <!-- <?php
             echo $_GET["q"];
-            ?>
+            ?> -->
 
             <?php
             if ($validSearch) {

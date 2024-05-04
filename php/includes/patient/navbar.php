@@ -30,7 +30,7 @@
 
                     
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="">Dashboard</a>
+                        <a class="nav-link text-dark" href="patientDashboard.php">Dashboard</a>
                     </li>
                     
                     <li class="nav-item">
@@ -38,7 +38,7 @@
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="">How To Become a Member</a>
+                        <a class="nav-link text-dark" href="howToBecomeMember.php">How To Become a Member</a>
                     </li>
 
                     <li class="nav-item">
