@@ -19,7 +19,7 @@
 
             <div class="navbarContainer">
                 <?php
-                    include("php/includes/navbar.php");
+                    include("php/includes/staff/navbar.php");
                 ?>
             </div>
 

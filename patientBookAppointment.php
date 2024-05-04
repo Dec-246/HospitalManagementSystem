@@ -1,10 +1,18 @@
+<?php
+
+session_start();
+
+    require_once('php/db_functions/db_connect.php');
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Book appointment</title>
     <link rel="stylesheet" href="css/global.css" type="text/css" />
 
     <link rel="stylesheet" href="css/mobile.css" type="text/css" media="only screen and (max-width : 607px)" />
@@ -14,7 +22,8 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="">
+
         <div class="navbarContainer">
             <?php
             include("php/includes/navbar.php");
@@ -26,9 +35,9 @@
             include("php/includes/header.php");
             ?>
         </div>
-
         <main>
 
+            <!-- code for scroll back to top button -->
             <script>
                 // Get button
                 let mybutton = document.getElementById("myBtn");
@@ -51,44 +60,35 @@
                 }
             </script>
 
-            <h1>Hello: <?php echo '(patient.$firstName, patient.lastName)';?></h1>
-            
-            <div class="rowButtons">
-                <div class="staffInfo">
-                    <a href="">Personal Info</a>
+
+            <form action="patientBookAppointmentSQL.php" method="POST" >
+                <div class="bookAppointment">
+                    <input type="text" name="firstName" placeholder="First Name"><br>
                 </div>
 
-                <div class="listOfAssertedPatients">
-                    <a href="">Patients</a>
-                </div>
-            </div>
-
-            <div class="rowButtons">
-                <div class="staffNotes">
-                    <a href="">Notes</a>
+                <div class="bookAppointment">
+                    <input type="text" name="lastName" placeholder="Last Name"><br>
                 </div>
 
-                <div class="staffSchedule">
-                    <a href="">Schedule</a>
-                </div>
-            </div>
-
-            <div class="rowButtons">
-                <div class="patientLabResults">
-                    <a href="">Patient Lab test Results</a>
+                <div class="bookAppointment">
+                    <input type="text" name="patientID" placeholder="Patient ID"><br><br>
                 </div>
 
-                <div class="rowButtons">
-                    <a href="">Patient bookings</a>
+                <div class="bookAppointment">
+                    <input type="date" name="appointmentDateTime" placeholder="Appointment Date"><br>
                 </div>
-            </div>
-                
 
+                <div class="bookAppointment">
+                    <input type="text" name="subject_" placeholder="Subject"><br><br>
+                </div>
 
+                <div class="submitNewStaff">
+                    <button type="submit" value="submit">Submit</button>
+                </div>
+            </form>
         </main>
-
-        
     </div>
+
     <div class="footer">
         <?php
         include("php/includes/footer.php");

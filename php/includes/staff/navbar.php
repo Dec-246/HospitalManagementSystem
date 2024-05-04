@@ -30,19 +30,19 @@
 
                     
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="">Dashboard</a>
+                        <a class="nav-link text-dark" href="staffDashboard.php">Dashboard</a>
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="">Contact Us</a>
-                    </li>
-                    
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" href="">How To Become a Member</a>
+                        <a class="nav-link text-dark" href="adminContacts.php">Contacts</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="">Log-out</a>
+                        <a class="nav-link text-dark" href="patientSearch.php">Search for patient</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="php/logout/logout.php">Log-out</a>
                     </li>
 
                 </ul>

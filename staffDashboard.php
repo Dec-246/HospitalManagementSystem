@@ -17,7 +17,7 @@
         <div class="container">
             <div class="navbarContainer">
                 <?php
-                include("php/includes/navbar.php");
+                include("php/includes/staff/navbar.php");
                 ?>
             </div>
 
@@ -67,7 +67,7 @@
                     </div>
 
                     <div class="staffSchedule">
-                        <a href="">Schedule</a>
+                        <a href="staffSchedule.php">Schedule</a>
                     </div>
                 </div>
 

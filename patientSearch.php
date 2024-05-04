@@ -1,12 +1,26 @@
-<?php
-// ini_set("display_errors",1); //1= true // 0= false
-include("config.php"); // use the config file instead of db_connect
-include_once('staffViewResultsSQL.php');
+<!-- check for search submission -->
+<?php 
+ini_set("display_errors",1);
+include("config.php");
+$searchQuery = $_GET['q'] ?? null;
+if (is_null($searchQuery) || empty($searchQuery)) {
+    $validSearch = false;
+} else {
+    $validSearch = true;
+
+    $searchQuery = "%" . $searchQuery ."%";
+// query by patients first name
+$stmt = $mysqli->prepare("SELECT * FROM patients WHERE ('firstName LIKE ?");
+$stmt->bind_param("s", $searchQuery);
+$stmt->execute();
+$result = $stmt->get_result();
+}
+
+
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,13 +35,11 @@ include_once('staffViewResultsSQL.php');
     </head>
     <body>
 
-
-
         <div class="">
 
             <div class="navbarContainer">
                 <?php
-                    include("php/includes/admin/navbar.php");
+                    include("php/includes/navbar.php");
                 ?>
             </div>
 
@@ -37,44 +49,47 @@ include_once('staffViewResultsSQL.php');
                 ?>
             </div>
 
+            <div class="container pb-5">
+                <h2></h2><br>
+            </div>
+
+            <div>
+                <div class="patientSearchForm">
+                <form method="get" action="patientSearch.php">
+                    <div>
+                        <label for="q">Search:</label>
+                        <input type="text" name="q"/>
+                    </div>
+                    <div>
+                        <input type="submit" value="Search for a patient"/>
+                    </div>
+                </form>
+            </div>
+
+            <?php
+            echo $_GET["q"];
+            ?>
+
+            <?php
+            if ($validSearch) {
+                echo "<p>Search found: {$result->num_rows} result(s)";
+                while ($obj = $result->fetch_object()) {
+                    echo "<h3>($obj->firstName)</h3>";
+                    
+                }
+            } else {
+                echo "<p>Seach for a patient.</p>";
+            }
+            ?>
+            </div>
+            
             
 
 
 
-            <div class="container pb-5">
-                <h2>List of Employees</h2><br>
-            </div>
 
-            <div class="row">
-                <div class="col-11">
-                    <table class="table table-striped">
-
-                        <thead class="table-dark">
-                            <td>Result ID</td>
-                            <td>Diagnosis</td>
-                            <td>Health Assessment</td>
-                            <td>Follow-up tests</td>
-                            <td>Patient Name</td>
-                            <td>Date of Birth</td>
-                        </thead>
-
-                        <?php for ($i = 0; $i < count($results); $i++) : ?>
-
-                            <tr>
-                                <td><?php echo $results[$i]['ID'] ?></td>
-                                <td><?php echo $results[$i]['Diagnosis'] ?></td>
-                                <td><?php echo $results[$i]['healthAssessment'] ?></td>
-                                <td><?php echo $results[$i]['tests'] ?></td>
-                                <td><?php echo $results[$i]['Name'] ?></td>
-                                <td><?php echo $results[$i]['dateOfBirth'] ?></td>
-
-                                <td><a href="updateResults.php?ID=<?php echo $results[$i]['ID']; ?>">Update</a></td>			
-                                
-                            </tr>
-                        <?php endfor; ?>
-                    </table>
-                </div>
-            </div>
+            
+            
     
         <div class="footer">
             <?php
@@ -104,6 +119,6 @@ include_once('staffViewResultsSQL.php');
         document.documentElement.scrollTop = 0;
         }
         </script>
-
+        
     </body>
 </html>
