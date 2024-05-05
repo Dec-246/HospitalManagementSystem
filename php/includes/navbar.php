@@ -46,7 +46,11 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="patientLogin.php">Patient log-in</a>
+                        <a class="nav-link text-dark" href="patientSignup.php">Patient Sign-up</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="staffLogin.php">Staff log-in</a>
                     </li>
                 </ul>
             </div>

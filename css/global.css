@@ -356,6 +356,28 @@ section{
 /* Patient 
 -------------------------------------------------- */
 
+/* Patient signup */
+.patientSignupForm{
+  padding-bottom: 20px;
+  margin: auto;
+  text-align: center;
+}
+.patientSignupFormButton{
+  padding-bottom: 20px;
+  margin: auto;
+  text-align: center;
+}
+
+/* Login */
+.patientLogin{
+  margin: auto;
+  text-align: center;
+}
+.pLoginTitle{
+  margin: auto;
+  text-align: center;
+}
+
 /* Patient dashboard */
 .staffInfo{
   background-color: white;
@@ -418,18 +440,6 @@ section{
   width: 200px;
 }
 
-/* Patient signup */
-
-.patientSignupForm{
-  padding-bottom: 20px;
-  margin: auto;
-  text-align: center;
-}
-.patientSignupFormButton{
-  padding-bottom: 20px;
-  margin: auto;
-  text-align: center;
-}
 
 /* Staff
 -------------------------------------------------- */

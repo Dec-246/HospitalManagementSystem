@@ -1,56 +1,9 @@
-
-
-    <!-- // begin database connection
-    $conn = 'php/config.php';
-    $conn = new mysqli($servername, $username, $password, $dbname);
-
-    // check if form is submitted
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $username = $_POST['$username'];
-            $password = $_POST['$password'];
-            $firstName = $_POST['$firstName'];
-            $lastName = $_POST['$lastName'];
-            $email = $_POST['$email'];
-            $phoneNumber = $_POST['$phoneNumber'];
-            $dateOfBirth = $_POST['$dateOfBirth'];
-            $gender = $_POST['$gender'];
-            $postCode = $_POST['$postCode'];
-            $address_ = $_POST['$address_'];
-
-        // encrypt data
-        $salt = bin2hex(random_bytes(16));
-
-        //hashing password for database
-        $hashed_password = hash('sha256', $password . $salt);
-
-        //insert data into users table
-        $stmt = $conn->prepare("INSERT INTO users (username, hashed_password, salt) VALUES (:username, :hashed_password, :salt)");
-        $stmt->bind_param(':username', $username);
-        $stmt->bind_param(':hashed_password', $hashed_password);
-        $stmt->bind_param(':salt', $salt);
-        $stmt->execute();
-
-
-        // insert data into patient table
-        $stmt = $conn->prepare("INSERT INTO patient (firstName, lastName, email, phoneNumber, dateOfBirth, gender, postCode, address_) VALUES (:firstName, :lastName, :email, :phoneNumber, :dateOfBirth, :gender, :postCode, :address_)");
-        $stmt->bind_param(':firstName', $firstName);
-        $stmt->bind_param(':lastName', $lastName);
-        $stmt->bind_param(':email', $email);
-        $stmt->bind_param(':phoneNumber', $phoneNumber);
-        $stmt->bind_param(':dateOfBirth', $dateOfBirth);
-        $stmt->bind_param(':gender', $gender);
-        $stmt->bind_param(':postCode', $postCode);
-        $stmt->bind_param(':address_', $address_);
-
-        echo "You have succesfully made an account!";
-    } -->
-
     <?php
 
-    ini_set("display_errors",1);
-    session_start();
-    require_once('php/db_functions/db_connect.php');
+    // ini_set("display_errors",1);
+session_start();
 
+    require_once('php/db_functions/db_connect.php');
 
 ?>
 
@@ -60,7 +13,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Patient sign-up page</title>
+        <title>Patient sign-up</title>
         <link rel="stylesheet" href="css/global.css" type="text/css"/>
 
         <link rel="stylesheet" href="css/mobile.css" type="text/css" media="only screen and (max-width : 607px)" />
@@ -111,16 +64,6 @@
             <form action="patientSignupSQL.php" method="POST">
                 
                 <div class="patientSignupForm">
-                    <label for="username">Username:</label> <br>
-                    <input type="text" id="username"name="username" required><br>
-                </div>
-    
-                <div class="patientSignupForm">
-                    <label for="password">Password:</label> <br>
-                    <input type="password" id="password" name="patientPassword" required><br>
-                </div>
-    
-                <div class="patientSignupForm">
                     <label for="firstName">First name:</label> <br>
                     <input type="text" id="firstName" name="firstName" required><br>  
                 </div>
@@ -140,10 +83,6 @@
                     <input type="text" id="phoneNumber" name="phoneNumber" required><br>  
                 </div>
                 
-                <div class="patientSignupForm">
-                    <label for="dateOfBirth">Date of birth:</label> <br>
-                    <input type="date" id="dateOfBirth" name="dateOfBirth" required><br> 
-                </div>
                 
                 <div class="patientSignupForm">
                     <label for="gender">Gender:</label> <br>
@@ -151,22 +90,35 @@
                 </div>
                 
                 <div class="patientSignupForm">
+                    <label for="dateOfBirth">Date of birth:</label> <br>
+                    <input type="date" id="dateOfBirth" name="dateOfBirth" required><br> 
+                </div>
+
+                <div class="patientSignupForm">
                     <label for="postCode">Post code:</label> <br>
                     <input type="char" id="postCode" name="postCode" required><br>   
                 </div>
                 
                 <div class="patientSignupForm">
                     <label for="address_">Address:</label> <br>
-                    <input type="varchar" id="address_" name="address_" required><br><br>    
+                    <input type="varchar" id="address_" name="address_" required><br>    
+                </div>
+
+                <div class="patientSignupForm">
+                    <label for="password">Password:</label> <br>
+                    <input type="password" id="password" name="userPassword" required><br><br>
                 </div>
                 
                 <div class="patientSignupFormButton">
-                    <input type="submit" value="Sign-up" name="submit">
+                    <input type="submit" value="Sign-up" name="submit"><br><br>
                 </div>
-    
+                
+                <div class="patientSignupForm">
+                    <a href="patientLogin.php" >Log-in</a>
+                </div>
             </form>
         </main>
-
+        
         <div class="footer">
         <?php
         include("php/includes/footer.php");
