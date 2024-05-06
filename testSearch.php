@@ -1,32 +1,3 @@
-<!-- check for search submission -->
-<?php 
-ini_set("display_errors",1);
-include("config.php");
-
-if(isset($_GET[ 'q'])) {
-    $searchQuery = $_GET['q'];
-} else {
-    $searchQuery = null;
-}
-
-
-if (is_null($searchQuery) || empty($searchQuery)) {
-    $validSearch = false;
-} else {
-    $validSearch = true;
-
-    $searchQuery = "%" . $searchQuery ."%";
-
-// query by patients first name
-$stmt = $conn->prepare("SELECT * FROM patient WHERE firstName = ? AND lastName = ? LIKE '?, ?'");
-
-$stmt->bind_param("ss", $searchQuery, $searchQuery);
-$stmt->execute();
-$result = $stmt->get_result();
-}
-
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -64,7 +35,7 @@ $result = $stmt->get_result();
 
             <div>
                 <div class="patientSearchForm">
-                <form method="get" action="patientSearch.php">
+                <form method="get" action="testSearch.php">
                     <div>
                         <label for="q">Search:</label>
                         <input type="text" name="q"/>
@@ -75,9 +46,9 @@ $result = $stmt->get_result();
                 </form>
             </div>
 
-            <!-- <?php
+            <?php
             echo $_GET["q"];
-            ?> -->
+            ?>
 
             <?php
             if ($validSearch) {
@@ -92,6 +63,35 @@ $result = $stmt->get_result();
             ?>
             </div>
             
+            
+            <!-- check for search submission -->
+            
+            <div class="testSearchForm">
+                <?php
+            // ini_set("display_errors",1);
+            include ("config.php");
+            
+                $sql = "SELECT * FROM patient";
+                $result = mysqli_query($conn, $sql);
+            
+                if(mysqli_num_rows($result) > 0){
+                    while($row = mysqli_fetch_assoc($result)){ //mysqli_fetch_assoc // fetches next available row within our object 
+                       
+                        echo "Patient ID: " . $row["ID"] . "<br>";
+                        echo "Patient First name: " . $row["firstName"] . "<br>";
+                        echo "Patient Last name: " . $row["lastName"] . "<br>";
+                        echo "Patient Email: " . $row["email"] . "<br>";
+                        echo "Patient date of birth: " . $row["dateOfBirth"] . "<br>";
+                        echo "Patient phone number: " . $row["phoneNumber"] . "<br>" . "<br>" . "<br>";
+            
+                    }; 
+                }
+                else{
+                    echo "No user found";
+                }    
+                mysqli_close ($conn);
+            ?>
+            </div> <br><br><br>
             
 
 

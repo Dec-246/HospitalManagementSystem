@@ -26,7 +26,7 @@ session_start();
 
         <div class="navbarContainer">
             <?php
-            include("php/includes/navbar.php");
+            include("php/includes/patient/navbar.php");
             ?>
         </div>
 
@@ -61,26 +61,26 @@ session_start();
             </script>
 
 
-            <form action="patientBookAppointmentSQL.php" method="POST" >
-                <div class="bookAppointment">
+            <form class="bookAppointmentForm" action="patientBookAppointmentSQL.php" method="POST" >
+                <!-- <br><br><div class="bookAppointment">
                     <input type="text" name="firstName" placeholder="First Name"><br>
-                </div>
+                </div><br>
 
                 <div class="bookAppointment">
                     <input type="text" name="lastName" placeholder="Last Name"><br>
-                </div>
+                </div><br> -->
 
                 <div class="bookAppointment">
-                    <input type="text" name="patientID" placeholder="Patient ID"><br><br>
-                </div>
+                    <input type="text" name="idPatient" placeholder="Patient ID"><br><br>
+                </div><br>
 
                 <div class="bookAppointment">
                     <input type="date" name="appointmentDateTime" placeholder="Appointment Date"><br>
-                </div>
+                </div><br>
 
                 <div class="bookAppointment">
                     <input type="text" name="subject_" placeholder="Subject"><br><br>
-                </div>
+                </div><br><br>
 
                 <div class="submitNewStaff">
                     <button type="submit" value="submit">Submit</button>

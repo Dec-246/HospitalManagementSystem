@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Personal Info</title>
+        <title>View staff</title>
         <link rel="stylesheet" href="css/global.css" type="text/css" />
 
         <link rel="stylesheet" href="css/mobile.css" type="text/css" media="only screen and (max-width : 620px)" />
@@ -34,40 +34,37 @@
             </div>
 
 
-            <div class="viewPersonalInfoTitle">
-            <h1>Personal info:</h1><br><br>
-        </div>
+            <div class="pastAppointmentTitle">
+                <h1>View Lab Test Results:</h1><br><br>
+            </div>
 
-        <!-- check for search submission -->
-
-        <div class="viewPersonalInfo">
-            <?php
+<!-- check for search submission -->
+            
+<div class="viewLabResults">
+                <?php
             // ini_set("display_errors",1);
-            include("config.php");
-
-            $sql = "SELECT * FROM patient WHERE ID = 1";
-            $result = mysqli_query($conn, $sql);
-
-            if (mysqli_num_rows($result) > 0) {
-                while ($row = mysqli_fetch_assoc($result)) { //mysqli_fetch_assoc // fetches next available row within our object 
-
-                    echo "Patient ID: " . $row["ID"] . "<br>";
-                    echo "Assigned staff ID: " . $row["assignedStaffID"] . "<br>";
-                    echo "First name: " . $row["firstName"] . "<br>";
-                    echo "Last name: " . $row["lastName"] . "<br>";
-                    echo "Your Email: " . $row["email"] . "<br>";
-                    echo "Your phone number: " . $row["phoneNumber"] . "<br>";
-                    echo "Patient date of birth: " . $row["dateOfBirth"] . "<br>";
-                    echo "Your post code: " . $row["postCode"] . "<br>";
-                    echo "Address: " . $row["address_"] . "<br>";
-                    echo "Registered doctor: " . $row["registeredDoctor"] . "<br>" . "<br>" . "<br>";
-                };
-            } else {
-                echo "No user found";
-            }
-            mysqli_close($conn);
+            include ("config.php");
+            
+                $sql = "SELECT * FROM results WHERE appointmentID = 2";
+                $result = mysqli_query($conn, $sql);
+            
+                if(mysqli_num_rows($result) > 0){
+                    while($row = mysqli_fetch_assoc($result)){ //mysqli_fetch_assoc // fetches next available row within our object 
+                       
+                        echo "Lab test result ID: " . $row["ID"] . "<br>";
+                        echo "Diagnosis: " . $row["Diagnosis"] . "<br>";
+                        echo "Health Assessment: " . $row["healthAssessment"] . "<br>";
+                        echo "Tests: " . $row["tests"] .  "<br>". "<br>" ."<br>";
+            
+                    }; 
+                }
+                else{
+                    echo "No user found";
+                }    
+                mysqli_close ($conn);
             ?>
-        </div><br><br><br>
+            </div><br><br><br>
+
 
 
 

@@ -32,71 +32,93 @@
             <script>
                 // Get button
                 let mybutton = document.getElementById("myBtn");
-    
+
                 // When the user scrolls down by 20px from the top of the page, show 'scroll back to top' button
-                window.onscroll = function() {scrollFunction()};
-    
+                window.onscroll = function() {
+                    scrollFunction()
+                };
+
                 function scrollFunction() {
-                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                    mybutton.style.display = "block";
-                } else {
-                    mybutton.style.display = "none";
+                    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                        mybutton.style.display = "block";
+                    } else {
+                        mybutton.style.display = "none";
+                    }
                 }
-                }
-    
+
                 // When user clicks on 'scroll back to top' button, scroll to top of the webpage
                 function topFunction() {
-                document.body.scrollTop = 0;
-                document.documentElement.scrollTop = 0;
+                    document.body.scrollTop = 0;
+                    document.documentElement.scrollTop = 0;
                 }
             </script>
 
-            <h1>Hello: <?php echo '(patient.$firstName, patient.lastName)';?></h1>
-            
-            <div class="rowButtons">
-                <div class="patientInfo">
-                    <a href="">Personal Info</a>
-                </div>
+            <div class="patientNameDash">
+                <?php
+                // ini_set("display_errors",1);
+                include("config.php");
 
-                <div class="staffInfo">
-                    <a href="">Doctors Info</a>
-                </div>
-            </div>
+                $sql = "SELECT * FROM patient WHERE ID = 2";
+                $result = mysqli_query($conn, $sql);
 
-            <div class="rowButtons">
-                <div class="doctorNotes">
-                    <a href="">Doctors Notes</a>
-                </div>
+                if (mysqli_num_rows($result) > 0) {
+                    while ($row = mysqli_fetch_assoc($result)) { //mysqli_fetch_assoc // fetches next available row within our object 
 
-                <div class="pastAppointments">
-                    <a href="">Past appointments</a>
-                </div>
-            </div>
+                        echo "Welcome: " . $row["firstName"] . ' ' . $row["lastName"] . "<br>";
+                        echo "Patient ID: " . $row["ID"] . "<br>" . "<br>" . "<br>";
+                    };
+                } else {
+                    echo "No user found";
+                }
+                mysqli_close($conn);
+                ?>
+            </div><br><br><br>
 
-            <div class="rowButtons">
-                <div class="patientLabResults">
-                    <a href="">Patient Lab test Results</a>
-                </div>
 
-                <div class="bookAppointment">
-                    <a href="patientBookAppointment.php">Book appointment</a>
-                </div>
-            </div>
-                
-            <div class="rowButtons">
-                <div class="patientLabResults">
-                    <a href="">Treatment</a>
-                </div>
+            <div class="patientDashboard">
+                <div class="rowButtons">
+                    <div class="patientInfo">
+                        <a href="patientViewPersonalInfo.php">Personal Info</a>
+                    </div><br>
+                    <div class="doctorInfo">
+                        <a href="patientViewDocInfo.php">Doctor Info</a>
+                    </div>
+                </div><br><br>
 
                 <div class="rowButtons">
-                    <a href="">Prescription</a>
-                </div>
-            </div>
+                    <div class="patientLabResults">
+                        <a href="patientViewLabResults.php">Patient Lab test Results</a>
+                    </div><br>
 
+                    <div class="bookAppointment">
+                        <a href="patientBookAppointment.php">Book appointment</a>
+                    </div>
+                </div><br><br>
+
+                <div class="rowButtons">
+                    <div class="patientTreatment">
+                        <a href="patientViewTreatment.php">Treatment</a>
+                    </div><br>
+
+                    <div class="patientPrescription">
+                        <a href="patientViewPrescription.php">Prescription</a>
+                    </div>
+                </div><br><br>
+
+                <div class="rowButtons">
+                    <div class="pastAppointments">
+                        <a href="patientViewPastAppointments.php">Past appointments</a>
+                    </div><br>
+                    <div class="doctorsNotes">
+                        <a href="patientViewStaffNotes.php">Doctors notes</a>
+                    </div>
+                </div><br><br>
+
+            </div>
 
         </main>
 
-        
+
     </div>
     <div class="footer">
         <?php

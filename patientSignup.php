@@ -63,6 +63,7 @@ session_start();
 
             <form action="patientSignupSQL.php" method="POST">
                 
+            <!-- user enters their information to sign up -->
                 <div class="patientSignupForm">
                     <label for="firstName">First name:</label> <br>
                     <input type="text" id="firstName" name="firstName" required><br>  
@@ -82,7 +83,6 @@ session_start();
                     <label for="phoneNumber">Phone number:</label> <br>
                     <input type="text" id="phoneNumber" name="phoneNumber" required><br>  
                 </div>
-                
                 
                 <div class="patientSignupForm">
                     <label for="gender">Gender:</label> <br>
@@ -113,6 +113,7 @@ session_start();
                     <input type="submit" value="Sign-up" name="submit"><br><br>
                 </div>
                 
+                <!-- take user to log in page if they have already got a log-in -->
                 <div class="patientSignupForm">
                     <a href="patientLogin.php" >Log-in</a>
                 </div>

@@ -1,5 +1,7 @@
 <?php
 
+//object oriented programming type
+
 function makeConnection()
 {
     $servername = "sql8.freesqldatabase.com";

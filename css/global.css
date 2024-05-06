@@ -379,67 +379,168 @@ section{
 }
 
 /* Patient dashboard */
-.staffInfo{
-  background-color: white;
-  color: black;
+.DocNoteForm{
   margin: auto;
   text-align: center;
-  font-size: 14px;
-  border-radius: 10px;
-  padding: 15px 32px;
-  width: 200px;
+  flex-direction: column;
 }
-.listOfAssertedPatients{
-  background-color: white;
-  color: black;
+.rowButtons{
+  padding-top: 20px;
+  flex-direction: row;
   margin: auto;
   text-align: center;
-  font-size: 14px;
-  border-radius: 10px;
-  padding: 15px 32px;
-  width: 200px;
+  width: 170px;
+  height: 100px;
+  background-color: white;
+  border-radius: 40px;
 }
-.staffNotes{
-  background-color: white;
-  color: black;
+.patientNameDash{
   margin: auto;
   text-align: center;
-  font-size: 14px;
-  border-radius: 10px;
-  padding: 15px 32px;
-  width: 200px;
-}
-.staffSchedule{
-  background-color: white;
-  color: black;
-  margin: auto;
-  text-align: center;
-  font-size: 14px;
-  border-radius: 10px;
-  padding: 15px 32px;
-  width: 200px;
-}
-.patientLabResults{
-  background-color: white;
-  color: black;
-  margin: auto;
-  text-align: center;
-  font-size: 14px;
-  border-radius: 10px;
-  padding: 15px 32px;
-  width: 200px;
-}
-.patientBookings{
-  background-color: white;
-  color: black;
-  margin: auto;
-  text-align: center;
-  font-size: 14px;
-  border-radius: 10px;
-  padding: 15px 32px;
-  width: 200px;
+  width: 100px;
+  height: 80px;
+  color: white;
+  font-size: large;
+  padding-bottom: 10px;
 }
 
+/* Prescription page */
+.viewPrescription{
+  padding-bottom: 100px;
+  margin: auto;
+  text-align: center;
+  background-color: white;
+  color: black;
+  width: 350px;
+  height: 200px;
+  border-radius: 30px;
+}
+.prescriptionTitle{
+  margin: auto;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+/* View Past Appointments */
+.viewPastAppointments{
+  margin: auto;
+  text-align: center;
+  padding-bottom: 520px;
+  background-color: white;
+  color: black;
+  width: 250px;
+  height: 300px;
+  border-radius: 30px;
+}
+.pastAppointmentTitle{
+  margin: auto;
+  text-align: center;
+  color: white;
+}
+
+/* Lab test results */
+.viewLabResults{
+  margin: auto;
+  text-align: center;
+  padding-bottom: 520px;
+  background-color: white;
+  color: black;
+  width: 250px;
+  height: 300px;
+  border-radius: 30px;
+}
+
+/* Doctors info */
+.viewStaffInfoTitle{
+  margin: auto;
+  text-align: center;
+  color: white;
+}
+.viewStaffInfo{
+  margin: auto;
+  text-align: center;
+  padding-bottom: 250px;
+  background-color: white;
+  color: black;
+  width: 250px;
+  height: 200px;
+  border-radius: 30px;
+}
+
+/* Personal Info */
+.viewPersonalInfoTitle{
+  margin: auto;
+  text-align: center;
+  color: white;
+}
+.viewPersonalInfo{
+  margin: auto;
+  text-align: center;
+  padding-bottom: 300px;
+  background-color: white;
+  color: black;
+  width: 250px;
+  height: 200px;
+  border-radius: 30px;
+}
+
+/* Doctor notes */
+.DocNotesTitle{
+  margin: auto;
+  text-align: center;
+  color: white;
+}
+.DocNotes{
+  margin: auto;
+  text-align: center;
+}
+
+/* view staff notes */
+.DocNoteForm{
+  flex-direction: column;
+  margin: auto;
+  text-align: center;
+  background-color: white;
+  width: 400px;
+  border-radius: 30px;
+}
+.DocNotesDate{
+  flex-direction: row;
+}
+.DocNotesTime{
+  flex-direction: row;
+}
+.DocNote{
+  flex-direction: row;
+}
+.actions{
+  flex-direction: row;
+}
+
+/* View treatment */
+.viewTreatment{
+  padding-top: 10px;
+  padding-bottom: 100px;
+  margin: auto;
+  text-align: center;
+  background-color: white;
+  color: black;
+  width: 350px;
+  height: 120px;
+  border-radius: 30px;
+}
+.TreatmentTitle{
+  margin: auto;
+  text-align: center;
+  padding-bottom: 50px;
+  color: white;
+}
+
+/* Book appointment */
+.bookAppointmentForm{
+  margin: auto;
+  text-align: center;
+}
 
 /* Staff
 -------------------------------------------------- */
@@ -451,4 +552,32 @@ section{
 }
 .Schedule{
   width: 100%;
+}
+
+/* Staff notes */
+.staffNotes{
+  margin: auto;
+  text-align: center;
+  color: black;
+  font-size: medium;
+}
+.staffNoteBox{
+  background-color: white;
+  color: black;
+  margin: auto;
+  text-align: center;
+  width: 170px;
+  height: 50px;
+}
+
+
+.testSearchForm{
+  background-color: #fff;
+  color: black;
+  margin: auto;
+  text-align: center;
+  width: 250px;
+  height: 60px;
+  padding-bottom: 7500px;
+  border-radius: 30px;
 }
