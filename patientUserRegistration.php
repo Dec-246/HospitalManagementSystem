@@ -7,6 +7,13 @@ require('config.php');
 $regLogin = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
 $regPatientPassword = $_POST['patientPassword'];
 $regPasswordConfirm = $_POST['passwordConfirm'];
+$regFirstName = $_POST['firstName'];
+$regLastName = $_POST['lastName'];
+$regPhoneNumber = $_POST['phoneNumber'];
+$regGender = $_POST['gender'];
+$regDateOfBirth = $_POST['dateOfBirth'];
+$regPostCode = $_POST['postCode'];
+$regAddress_ = $_POST['address_'];
 
 if (!$regLogin) {
     $_SESSION['regError'] = 1;
@@ -35,10 +42,11 @@ if ($regPatientPassword != $regPasswordConfirm || $regPatientPassword == "") {  
         $_SESSION['regError'] = 3;
         $referer = "patientRegister.php";
     } else {
+
         // Insert the New User into the Database
-        $stmt = $conn->prepare("INSERT INTO patient(email, patientPassword) VALUES (?, ?)"); // users== patient  //userPassword == patientPassword
+        $stmt = $conn->prepare("INSERT INTO patient(email, patientPassword, firstName, lastName, phoneNumber, gender, dateOfBirth, postCode, address_) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)"); // users== patient  //userPassword == patientPassword
         $hashedPw = password_hash($regPatientPassword, PASSWORD_BCRYPT);
-        $stmt->bind_param("ss", $regLogin, $hashedPw);
+        $stmt->bind_param("sssssssss", $regLogin, $hashedPw, $regFirstName, $regLastName, $regPhoneNumber, $regGender, $regDateOfBirth, $regPostCode, $regAddress_);
         $stmt->execute();
 
         if (isset($_SESSION['regError'])) {
@@ -53,3 +61,4 @@ $conn->close();
 
 header("Location: ".$referer); // send user to diff page 
 exit;
+

@@ -127,7 +127,7 @@ require('patientAuthorize.php');
     </div>
     <div class="footer">
         <?php
-        require('patientDebugger.php');
+        
         include("php/includes/footer.php");
         ?>
     </div>
