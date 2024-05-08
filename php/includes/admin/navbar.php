@@ -22,7 +22,7 @@
 
             <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse" id="navbarNav">
                 <li class="nav-item">
-                    <a class="nav-link text-dark" href="./Index.php">
+                    <a class="nav-link text-dark" href="patientSearch.php">
                         <img border="0" alt="User Icon" src="img/home-icon.png" width="30" height="30">
                     </a>
                 </li>

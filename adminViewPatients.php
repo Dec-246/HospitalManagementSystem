@@ -68,7 +68,7 @@ include_once('adminViewPatientsSQL.php');
                                 <td><?php echo $patient[$i]['dateOfBirth'] ?></td>
                                 <td><?php echo $patient[$i]['gender'] ?></td>
 
-                                <td><a href="adminUpdatePatient.php?assertedDoctor=<?php echo $patient[$i]['assertedDoctor']; ?>">Update</a></td>			
+                                <td><a href="adminUpdatePatient.php?ID=<?php echo $patient[$i]['ID']; ?>">Update</a></td>			
                                 <!-- updatePatient.php?ID --- PREVIOUS  -->
                             </tr>
                         <?php endfor; ?>
