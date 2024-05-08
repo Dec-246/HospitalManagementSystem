@@ -20,7 +20,7 @@ if (isset($lastName) && isset($firstName)) {
     $validSearch = 1;
 };
 // query by patients first name last name
-$stmt = $conn->prepare("SELECT * FROM patient WHERE firstName = ? AND lastName = ?");
+$stmt = $conn->prepare("SELECT * FROM staff WHERE firstName = ? AND lastName = ?");
 
 $stmt->bind_param("ss", $firstName, $lastName);
 $stmt->execute();
@@ -51,7 +51,7 @@ $result = $stmt->get_result();
 
         <div class="navbarContainer">
             <?php
-            include("php/includes/staff/navbar.php");
+            include("php/includes/admin/navbar.php");
             ?>
         </div>
 
@@ -66,18 +66,19 @@ $result = $stmt->get_result();
         </div>
 
         <div>
+            <!-- asks user to enter first name and last name of the user that they are wanting to search for -->
             <div class="patientSearchForm">
-                <form method="get" action="patientSearch.php">
+                <form method="get" action="adminSearchStaff.php">
                     <div>
                         <label for="firstName">First Name:</label>
                         <input type="text" name="firstName" />
-                    </div>
+                    </div><br>
                     <div>
                         <label for="lastName">Second Name:</label>
                         <input type="text" name="lastName" />
-                    </div>
+                    </div><br><br>
                     <div>
-                        <input type="submit" value="Search for a patient" />
+                        <input type="submit" value="Search for a staff member" />
                     </div>
                 </form>
             </div><br><Br><Br>
@@ -90,17 +91,18 @@ $result = $stmt->get_result();
                     while ($obj = $result->fetch_object()) {
 
                         //enter columns from table
-                        echo "<h3>Patient ID: ($obj->ID)</h3>";
-                        echo "<h3>Name: ($obj->firstName)</h3>";
+                        echo "<h3>Staff ID: ($obj->ID)</h3>";
+                        echo "<h3>Department ID: ($obj->department_id)</h3>";
+                        echo "<h3>First name: ($obj->firstName)</h3>";
                         echo "<h3>Second name: ($obj->lastName)</h3>";
                         echo "<h3>Phone number: ($obj->phoneNumber)</h3>";
                         echo "<h3>Email: ($obj->email)</h3>";
-                        echo "<h3>Registered doctor: ($obj->registeredDoctor)</h3>";
-                        echo "<h3>Post code: ($obj->postCode)</h3>";
-                        echo "<h3>Address: ($obj->address_)</h3>";
+                        echo "<h3>Staff role: ($obj->staffRole)</h3>";
+                        echo "<h3>Salary: ($obj->salary)</h3>";
+                        echo "<h3>Hire date: ($obj->hireDate)</h3>";
                     }
                 } else {
-                    echo "<p>Search for a patient.</p>";
+                    echo "<p>Search for a staff member.</p>";
                 }
                 ?>
             </div><br><br>

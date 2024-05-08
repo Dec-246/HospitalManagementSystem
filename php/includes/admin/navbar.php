@@ -22,7 +22,7 @@
 
             <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse" id="navbarNav">
                 <li class="nav-item">
-                    <a class="nav-link text-dark" href="patientSearch.php">
+                    <a class="nav-link text-dark" href="adminSearchPatients.php">
                         <img border="0" alt="User Icon" src="img/home-icon.png" width="30" height="30">
                     </a>
                 </li>
@@ -37,6 +37,13 @@
                         <a class="nav-link text-dark" href="adminContacts.php">Contact numbers</a>
                     </li>
                     
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="adminSearchStaff.php">Search Staff members</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="adminSearchPatients.php">Search patients</a>
+                    </li>
 
                     <li class="nav-item">
                         <a class="nav-link text-dark" href="adminLogout.php">Sign-out</a>

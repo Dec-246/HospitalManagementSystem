@@ -51,7 +51,7 @@ $result = $stmt->get_result();
 
         <div class="navbarContainer">
             <?php
-            include("php/includes/staff/navbar.php");
+            include("php/includes/admin/navbar.php");
             ?>
         </div>
 
