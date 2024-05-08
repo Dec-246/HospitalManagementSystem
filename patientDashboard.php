@@ -1,3 +1,8 @@
+<?php
+require('patientSessions.php');
+require('patientAuthorize.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -122,6 +127,7 @@
     </div>
     <div class="footer">
         <?php
+        require('patientDebugger.php');
         include("php/includes/footer.php");
         ?>
     </div>

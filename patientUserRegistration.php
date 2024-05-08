@@ -1,7 +1,7 @@
 <?php
 // Registration Logic Here
 ini_set("display_errors", 1);
-require('testSessions.php');
+require('patientSessions.php');
 require('config.php');
 
 $regLogin = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
@@ -10,7 +10,7 @@ $regPasswordConfirm = $_POST['passwordConfirm'];
 
 if (!$regLogin) {
     $_SESSION['regError'] = 1;
-    $referer = "testRegister.php";
+    $referer = "patientRegister.php";
     header("Location: ". $referer); 
     exit;
 }
@@ -18,7 +18,7 @@ if (!$regLogin) {
 //check if password correct
 if ($regPatientPassword != $regPasswordConfirm || $regPatientPassword == "") {  //regPassword ==  regPatientPassword
     $_SESSION['regError'] = 2; 
-    $referer = "testRegister.php"; 
+    $referer = "patientRegister.php"; 
     header("Location: ../".$referer); 
     exit;
 } else { 
@@ -33,7 +33,7 @@ if ($regPatientPassword != $regPasswordConfirm || $regPatientPassword == "") {  
 
     if ($numUsers == 1) {
         $_SESSION['regError'] = 3;
-        $referer = "testRegister.php";
+        $referer = "patientRegister.php";
     } else {
         // Insert the New User into the Database
         $stmt = $conn->prepare("INSERT INTO patient(email, patientPassword) VALUES (?, ?)"); // users== patient  //userPassword == patientPassword
@@ -44,7 +44,7 @@ if ($regPatientPassword != $regPasswordConfirm || $regPatientPassword == "") {  
         if (isset($_SESSION['regError'])) {
             unset($_SESSION['regError']);
         }
-        $referer = "testLogin.php";
+        $referer = "patientLogin.php";
     }
 }
 

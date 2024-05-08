@@ -1,7 +1,7 @@
 <?php
 
 
-include('testSessions.php');
+include('patientSessions.php');
 //logout code
 
 
@@ -22,6 +22,6 @@ session_destroy();
 //destroy the session
 
 
-header("location:../login.php");
+header("location:patientLogin.php");
 //to redirect
 exit();

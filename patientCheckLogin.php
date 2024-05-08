@@ -1,6 +1,6 @@
 <?php
 ini_set("display_errors", 1);
-require('testSessions.php');
+require('patientSessions.php');
 require('config.php');
 // print_r($_POST);
 // users (table)== patient  
@@ -32,11 +32,11 @@ function checkPassword($patientPassword, $dbPasswordHash)
     if (password_verify($patientPassword, $dbPasswordHash)) {
         unset($_SESSION['loginError']);
         $_SESSION['login'] = 1;
-        $referer = "testIndex.php";
+        $referer = "patientDashboard.php";
     } else {
         // database does not match error
         $_SESSION['loginError'] = 1;
-        $referer = "testLogin.php";
+        $referer = "patientLogin.php";
     }
     return $referer;
 }
@@ -49,12 +49,12 @@ if ($email) {
         $referer = checkPassword($patientPassword, $userDbPW);
     } else {
         $_SESSION['loginError'] = 1;
-        $referer = "testLogin.php";
+        $referer = "patientLogin.php";
     }
 } else {
     // not valid email error
     $_SESSION['loginError'] = 1;
-    $referer = "testLogin.php";
+    $referer = "patientLogin.php";
 }
 
 $conn->close();

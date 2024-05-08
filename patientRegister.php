@@ -1,7 +1,7 @@
 <?php
-// add includes to sessions
 ini_set("display_errors", 1);
-require('testSessions.php');
+
+require('patientSessions.php');
 ?>
 <!doctype html>
 <html>
@@ -38,47 +38,58 @@ require('testSessions.php');
             <div class="loginContainer">
                 <div class="login">
 
+                    <Br>
                     <div class="LoginTitle">
-                        <h1>Login</h1>
-                    </div>
-
+                        <h1>Registration</h1>
+                    </div><br><br>
 
                     <div class="loginError">
-                        <br><br><?php
-                                if (isset($_SESSION['loginError'])) {
-                                    echo "<p class=\"error\">Invalid Login Details</p>";
-                                }
-                                ?>
+                        <?php
+                        // Error messages
+                        if (isset($_SESSION['regError'])) {
+                            switch ($_SESSION['regError']) {
+                                case 1:
+                                    echo "<p class=\"error\">Invalid Email Address</p>";
+                                    break;
+                                case 2:
+                                    echo "<p class=\"error\">Please confirm your password</p>";
+                                    break;
+                                case 3:
+                                    echo "<p class=\"error\">Already Registered</p>";
+                                    break;
+                            }
+                        }
+                        ?>
                     </div>
-                    <!-- users (table)== patient  
-            //userPassword == patientPassword -->
-                    <!-- //userLogin== email -->
+
                     <div class="LoginForm">
-                        <form action="testCheckLogin.php" method="post">
+                        <form action="patientUserRegistration.php" method="post">
                             <div>
-                                <label for="email">Login:</label>
+                                <label for="email">Email:</label>
                                 <input type="text" name="email" id="email">
 
-                            </div>
+                            </div><br>
                             <div>
                                 <label for="patientPassword">Password:</label>
                                 <input type="text" name="patientPassword" id="patientPassword">
 
-                            </div>
+                            </div><br>
                             <div>
-                                <input type="submit" value="Login">
+                                <label for="passwordConfirm">Confirm Password:</label>
+                                <input type="text" name="passwordConfirm" id="passwordConfirm">
+
+                            </div><br><br>
+                            <div>
+                                <input type="submit" value="Register">
                             </div>
                         </form>
-                        <p><a href="testRegister.php">Register</a></p>
-                        <p><a href="testIndex.php">Not Allowed!</a></p>
                     </div>
+
                 </div>
             </div>
         </div>
     </div>
     <?php
-    // debugging include
-    // remove in productions
     // require('testDebugger.php');
     ?>
     <div class="footer">
