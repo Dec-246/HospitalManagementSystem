@@ -1,3 +1,5 @@
+<!-- staff register -->
+
 <?php
 ini_set("display_errors", 1);
 
@@ -63,58 +65,53 @@ require('patientSessions.php');
                     </div>
 
                     <div class="LoginForm">
-                        <form action="patientUserRegistration.php" method="post">
+                        <form action="adminCreateStaffReplacement.php" method="post">
 
-                            <div class="patientSignupForm">
-                                <label for="firstName">First name:</label> <br>
-                                <input type="text" id="firstName" name="firstName" required><br>
+
+                            <div class="createStaffForm">
+                                <input type="text" name="firstName" placeholder="firstName"><br>
                             </div>
 
-                            <div class="patientSignupForm">
-                                <label for="lastName">last name:</label> <br>
-                                <input type="text" id="lastName" name="lastName" required><br>
+                            <div class="createStaffForm">
+                                <input type="text" name="lastName" placeholder="lastName"><br>
                             </div>
 
-                            <div class="patientSignupForm">
-                                <label for="phoneNumber">Phone number:</label> <br>
-                                <input type="text" id="phoneNumber" name="phoneNumber" required><br>
+                            <div class="createStaffForm">
+                                <input type="text" name="phoneNumber" placeholder="phoneNumber"><br>
                             </div>
 
-                            <div class="patientSignupForm">
-                                <label for="gender">Gender:</label> <br>
-                                <input type="text" id="gender" name="gender" required><br>
-                            </div>
-
-                            <div class="patientSignupForm">
-                                <label for="dateOfBirth">Date of birth:</label> <br>
-                                <input type="date" id="dateOfBirth" name="dateOfBirth" required><br>
-                            </div>
-
-                            <div class="patientSignupForm">
-                                <label for="postCode">Post code:</label> <br>
-                                <input type="char" id="postCode" name="postCode" required><br>
-                            </div>
-
-                            <div class="patientSignupForm">
-                                <label for="address_">Address:</label> <br>
-                                <input type="varchar" id="address_" name="address_" required>
-                            </div><br>
-
-                            <div class="patientSignupForm">
-                                <label for="email">Email:</label>
-                                <input type="text" name="email" id="email">
-
-                            </div><br>
                             
-                            <div class="patientSignupForm">
-                                <label for="patientPassword">Password:</label>
-                                <input type="text" name="patientPassword" id="patientPassword">
+                            <div class="createStaffForm">
+                                <input type="text" name="gender" placeholder="gender"><br>
+                            </div>
+                            
+                            <div class="createStaffForm">
+                                <input type="text" name="staffRole" placeholder="staffRole"><br>
+                            </div>
+                            
+                            <div class="createStaffForm">
+                                <input type="text" name="salary" placeholder="salary"><br>
+                            </div>
+                            
+                            <div class="createStaffForm">
+                                <input type="date" name="hireDate" placeholder="hireDate"><br>
+                            </div>
+                            
+                            <div class="createStaffForm">
+                                <input type="text" name="department_id" placeholder="department_id"><br>
+                            </div>
+                            
+                            <div class="createStaffForm">
+                                <input type="text" name="email" placeholder="email"><br>
+                            </div>
 
-                            </div><br>
+                            <div class="createStaffForm">
+                                <input type="password" name="staffPassword" placeholder="password"><br><br>
+                            </div>
 
                             <div class="patientSignupForm">
                                 <label for="passwordConfirm">Confirm Password:</label>
-                                <input type="text" name="passwordConfirm" id="passwordConfirm">
+                                <input type="text" name="staffPasswordConfirm" id="passwordConfirm">
                             </div><br><br>
 
                             <div>
@@ -163,3 +160,6 @@ require('patientSessions.php');
 </body>
 
 </html>
+
+<!--  tester
+ Daisy@test.com -->

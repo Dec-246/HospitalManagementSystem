@@ -1,68 +1,30 @@
-
-
- <?php
-    // begin database connection
-    $conn = 'php/config.php';
-    $conn = new mysqli($servername, $username, $password, $dbname);
-
-    $message = '';
-
-    //check if form is submitted
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $username = $_POST['$username'];
-        $password = $_POST['$password'];
-   
-        // fetch encryption $ password from user table
-        $stmt = $conn->prepare("INSERT INTO hashed_password, salt FROM users WHERE username = :username");
-        $stmt->bind_param(':username', $username);
-        $stmt->execute();
-        $result = $stmt->fetch(mysqli::fetch_assoc());
-
-        if ($result) {
-             $hashed_password = hash('sha26', $password . $result['salt']);
-
-            //verify hashed password
-             if ($hashed_password === $result['hashed_result']) {
-                 $_SESSION['loggedin'] = true;
-                 $_SESSION['username'] = $username;
-                 $message = "Login was successful!";
-                 header('Location: index.php'); //redirect user to home page
-                 exit;
-            } else {
-                 $message = "Invalid username or password used!";
-            }
-        } else {
-           $message = "Invalid username or password used!";
-        }
-    }
+<?php
+// add includes to sessions
+ini_set("display_errors", 1);
+require('patientSessions.php');
 ?>
+<!doctype html>
+<html>
 
-<!DOCTYPE html>
-<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View staff</title>
+    <link rel="stylesheet" href="css/global.css" type="text/css" />
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Staff sign-in</title>
-        <link rel="stylesheet" href="css/global.css" type="text/css"/>
+    <link rel="stylesheet" href="css/mobile.css" type="text/css" media="only screen and (max-width : 620px)" />
 
-        <link rel="stylesheet" href="css/mobile.css" type="text/css" media="only screen and (max-width : 607px)" />
+    <link rel="stylesheet" href="css/desktop.css" type="text/css" media="only screen and (min-width : 621px)" />
 
-        <link rel="stylesheet" href="css/desktop.css" type="text/css" media="only screen and (min-width : 608px)" />
 
-    </head>
+</head>
 
-    <body>
-
-        <h2>Staff Log-in</h2>
-
-       <?php if ($message): ?>
-            <p><?php echo $message; ?></p>
-        <?php endif; ?>-
+<body>
+    <div class="">
 
         <div class="navbarContainer">
             <?php
-            include("php/includes/admin/navbar.php");
+            include("php/includes/navbar.php");
             ?>
         </div>
 
@@ -72,29 +34,81 @@
             ?>
         </div>
 
-        <main>
+        <div class="container">
+            <div class="loginContainer">
+                <div class="login">
 
-            <form action="" method="post">
-                    <div class="patientLoginForm">
-                        <label for="username">Username: </label> <br>
-                        <input type="text" id="username"name="username" required><br>
+                    <div class="LoginTitle">
+                        <h1>Login</h1>
                     </div>
-    
-                    <div class="patientLoginForm">
-                        <label for="password">password: </label> <br>
-                        <input type="password" id="password"name="password" required><br><br>
+
+
+                    <div class="loginError">
+                        <br><br><?php
+                                if (isset($_SESSION['loginError'])) {
+                                    echo "<p class=\"error\">Invalid Login Details</p>";
+                                }
+                                ?>
                     </div>
-    
-                    <div class="patientSignupFormButton">
-                        <input type="submit" value="Sign-up" name="submit"><br><br>
+                
+                    <div class="LoginForm">
+                        <form action="staffCheckLogin.php" method="post">
+                            <div>
+                                <label for="email">Login:</label>
+                                <input type="text" name="email" id="email">
+
+                            </div>
+                            <div>
+                                <label for="patientPassword">Password:</label>
+                                <input type="text" name="staffPassword" id="staffPassword">
+
+                            </div>
+                            <div>
+                                <input type="submit" value="Login">
+                            </div>
+                        </form>
+                        <!-- <p><a href="patientRegister.php">Register</a></p> -->
+                        <p><a href="patientDashboard.php">Not Allowed!</a></p>
                     </div>
-    
-                    <a href="php/signup/patientSignup.php"class="patientSignup">Sign-up</a>
-            </form>
-        </main>
-        
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php
+    // debugging include
+    // remove in productions
+    // require('testDebugger.php');
+    ?>
+    <div class="footer">
         <?php
         include("php/includes/footer.php");
         ?>
-    </body>
+    </div>
+
+    <!-- scroll to top button -->
+    <script>
+        // Get button
+        let mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down by 20px from the top of the page, show 'scroll back to top' button
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When user clicks on 'scroll back to top' button, scroll to top of the webpage
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+
 </html>
