@@ -88,13 +88,15 @@ include("config.php");
                 }
                 ?>
 
-                <form>
+                <form action="adminAssignDocToPatient.php" method="post">
                     <p>Staff member:</p>
 
                     <p>patient:</p>
 
-                    
-                    
+                    <input>
+
+                    <input>
+
                 </form>
             </select><br><br>
 
