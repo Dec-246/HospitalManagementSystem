@@ -111,7 +111,7 @@ require('patientSessions.php');
 
                             <div class="patientSignupForm">
                                 <label for="passwordConfirm">Confirm Password:</label>
-                                <input type="text" name="staffPasswordConfirm" id="passwordConfirm">
+                                <input type="password" name="staffPasswordConfirm" id="passwordConfirm">
                             </div><br><br>
 
                             <div>

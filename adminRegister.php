@@ -79,13 +79,13 @@ require('patientSessions.php');
                             
                             <div class="patientSignupForm">
                                 <label for="adminPassword">Password:</label><br>
-                                <input type="text" name="adminPassword" id="adminPassword">
+                                <input type="password" name="adminPassword" id="adminPassword">
 
                             </div><br>
 
                             <div class="patientSignupForm">
                                 <label for="passwordConfirm">Confirm Password:</label><br>
-                                <input type="text" name="passwordConfirm" id="passwordConfirm">
+                                <input type="password" name="passwordConfirm" id="passwordConfirm">
                             </div><br><br>
 
                             <div>

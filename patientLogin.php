@@ -62,7 +62,7 @@ require('patientSessions.php');
                             </div>
                             <div>
                                 <label for="patientPassword">Password:</label>
-                                <input type="text" name="patientPassword" id="patientPassword">
+                                <input type="password" name="patientPassword" id="patientPassword">
 
                             </div>
                             <div>
