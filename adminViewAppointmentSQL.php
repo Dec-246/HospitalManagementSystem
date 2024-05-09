@@ -4,19 +4,23 @@
     // require_once('php/db_functions/db_connect.php');
     
     $sql = 'SELECT appointment.ID, appointment.dateTime, appointment.subject, 
-    CONCAT(patient.firstName," ",patient.lastName) AS "patientName"
-    CONCAT(staff.firstName," ",staff.lastName) AS "Name"
+    CONCAT(patient.firstName," ",patient.lastName) AS "patientName",
+    CONCAT(staff.firstName," ",staff.lastName) AS "staffName"
     FROM appointment
 
     INNER JOIN patient ON (appointment.idPatient = patient.ID)
     INNER JOIN staff ON (appointment.idDoctor = staff.ID)';
 
 $result = mysqli_query($conn, $sql);
-$staff = array(); //Initialize the array
+$staff = array();
+$patient = array(); //Initialize the array
+$appointment = array();
 while ($row = mysqli_fetch_assoc($result)) {
 
-    //while ($row = $result->fetch_assoc()) { //previous code for above
+// the code below outputs the rows from the tables mentioned
     $staff[] = $row; 
+    $patient[] = $row; 
+    $appointment[] = $row; 
 }
 
 

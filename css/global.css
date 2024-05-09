@@ -261,55 +261,10 @@ section{
   margin: auto;
   text-align: center;
 }
-
-/* Admin dashboard */
-/* .rowButtons{
-  display: flex;
-  flex-direction: row;
-}
-
-.registeredDoctors{
-  background-color: white;
-  color: black;
+.AssignDocToPatient{
   margin: auto;
   text-align: center;
-  font-size: 14px;
-  border-radius: 10px;
-  padding: 15px 32px;
-  width: 200px;
 }
-.assignDocToPatient{
-  background-color: white;
-  color: black;
-  margin: auto;
-  text-align: center;
-  font-size: 14px;
-  border-radius: 10px;
-  padding: 15px 32px;
-  width: 200px;
-}
-
-.upcomingAppointments{
-  background-color: white;
-  color: black;
-  margin: auto;
-  text-align: center;
-  font-size: 14px;
-  border-radius: 10px;
-  padding: 15px 32px;
-  width: 200px;
-}
-.patientData{
-  background-color: white;
-  color: black;
-  margin: auto;
-  text-align: center;
-  font-size: 14px;
-  border-radius: 10px;
-  padding: 15px 32px;
-  width: 200px;
-} */
-
 
 
 /* turns paragraph columns into a column when website in mobile view */
@@ -623,4 +578,15 @@ section{
   height: 60px;
   padding-bottom: 7500px;
   border-radius: 30px;
+}
+/* risk awareness page */
+.risk{
+  margin: auto;
+  text-align: center;
+  color: white;
+  width: fit-content;
+  height: fit-content;
+  background-color: grey;
+  border-radius: 30px;
+  padding: 10px;
 }
