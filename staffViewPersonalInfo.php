@@ -46,7 +46,7 @@
             // ini_set("display_errors",1);
             include("config.php");
 
-            $sql = "SELECT * FROM patient WHERE ID = 1";
+            $sql = "SELECT * FROM staff WHERE ID = 1";
             $result = mysqli_query($conn, $sql);
 
             if (mysqli_num_rows($result) > 0) {

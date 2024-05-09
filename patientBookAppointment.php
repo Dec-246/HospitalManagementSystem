@@ -75,11 +75,11 @@ session_start();
                 </div><br>
 
                 <div class="bookAppointment">
-                    <input type="date" name="appointmentDateTime" placeholder="Appointment Date"><br>
+                    <input type="date" name="dateTime" placeholder="Appointment Date"><br>
                 </div><br>
 
                 <div class="bookAppointment">
-                    <input type="text" name="subject_" placeholder="Subject"><br><br>
+                    <input type="text" name="subject" placeholder="Subject"><br><br>
                 </div><br><br>
 
                 <div class="submitNewStaff">

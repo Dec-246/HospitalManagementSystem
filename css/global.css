@@ -397,7 +397,11 @@ section{
   padding: 20px;
   border-radius: 30px;
 }
-
+.passwordMessage{
+  margin: auto;
+  text-align: center;
+  color: white;
+}
 /* Patient dashboard */
 .DocNoteForm{
   margin: auto;

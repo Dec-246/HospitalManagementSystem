@@ -8,7 +8,7 @@ $firstName = $_POST['firstName'];
 $lastName = $_POST['lastName'];
 $patientID = $_POST['idPatient'];
 $appointmentDateTime = $_POST['dateTime'];
-$subject = $_POST['subject_'];
+$subject = $_POST['subject'];
 
 
 // *INSERT DATA INTO A DATABASE*
@@ -49,7 +49,7 @@ $conn = makeConnection();
 
 $created = false;
 
-$stmt = $conn->prepare("INSERT INTO appointment (idPatient, dateTime, subject_) VALUES (?, ?, ?)");
+$stmt = $conn->prepare("INSERT INTO appointment (idPatient, dateTime, subject) VALUES (?, ?, ?)");
 $stmt->bind_param('iss', $patientID, $appointmentDateTime, $subject);
 
 // firstName, lastName, // $firstName, $lastName, 
@@ -65,7 +65,7 @@ if ($stmt) {
 $stmt->close();
 $conn->close();
 
-header('Location: adminDashboard.php');
+header('Location: patientDashboard.php');
 exit;
 
 }

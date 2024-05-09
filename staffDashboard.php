@@ -53,7 +53,7 @@
 
                 <div class="rowButtons">
                     <div class="staffInfo">
-                        <a href="">Personal Info</a>
+                        <a href="staffViewPersonalInfo.php">Personal Info</a>
                     </div>
 
                     <div class="listOfAssertedPatients">

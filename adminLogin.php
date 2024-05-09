@@ -70,6 +70,15 @@ require('patientSessions.php');
                         <!-- <p><a href="patientRegister.php">Register</a></p> -->
                         <!-- <p><a href="adminDashboard.php">Not Allowed!</a></p> -->
                     </div>
+
+                    <!-- Password message box requirement -->
+                    <div id="message" class="passwordMessage">
+                        <h4>Password must contain:</h4>
+                        <p id="letter" class="invalid">A <b>lowercase</b> letters</p>
+                        <p id="capital" class="invalid">A <b>capital (uppercase)</b> letters</p>
+                        <p id="number" class="invalid">A <b>number</b> letters</p>
+                        <p id="length" class="invalid">Minimum <b>8 characters</b> </p>
+                    </div><br>
                 </div>
             </div>
         </div>
@@ -80,6 +89,67 @@ require('patientSessions.php');
         include("php/includes/footer.php");
         ?>
     </div>
+
+    <!-- password require -->
+    <script>
+        var myInput = document.getElementById("adminPassword");
+        var letter = document.getElementById("letter");
+        var capital = document.getElementById("capital");
+        var number = document.getElementById("number");
+        var length = document.getElementById("length");
+
+        // when password input clicked, show message
+        myInput.onfocus = function(){
+            document.getElementById("message").style.display = "block";
+        }
+
+        //when user clicks off password input, hide message
+        myInput.onblur = function(){
+            document.getElementById("message").style.display = "none";
+        }
+
+        //when user starts typing in password input
+        myInput.onkeyup =function(){
+            //validate lowercase letters
+            var lowerCaseLetters = /[a-z]/g;
+            if(myInput.value.match(lowerCaseLetters)) {
+                letter.classList.remove("invalid");
+                letter.classList.add("valid");
+            } else{
+                letter.classList.remove("valid");
+                letter.classList.add("invalid");
+            }
+
+             //validate capital letters
+             var upperCaseLetters = /[A-Z]/g;
+            if(myInput.value.match(upperCaseLetters)) {
+                capital.classList.remove("invalid");
+                capital.classList.add("valid");
+            } else{
+                capital.classList.remove("valid");
+                capital.classList.add("invalid");
+            }
+
+            //validate numbers
+            var numbers = /[0-9]/g;
+            if(myInput.value.match(numbers)){
+                number.classList.remove("invalid");
+                number.classList.add("valid");
+            }   else{
+                number.classList.remove("valid");
+                number.classList.add("invalid");
+            }
+
+            //validate length
+            if(myInput.value.length >= 8){
+                length.classList.remove("invalid");
+                length.classList.add("valid");
+            }   else{
+                length.classList.remove("valid");
+                length.classList.add("invalid");
+            }
+        }
+    </script>
 
     <!-- scroll to top button -->
     <script>
