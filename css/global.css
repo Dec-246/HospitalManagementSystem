@@ -146,6 +146,10 @@ a.navbar-brand {
 .homePageIntro{
   color: #fff;  
 }
+.homepageImage{
+  margin: auto;
+  text-align: center;
+}
 
 .emergencyContactHome{
   width: 350px;
