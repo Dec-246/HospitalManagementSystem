@@ -18,7 +18,7 @@ if (!$regLogin) {
 }
 
 //check if password correct
-if ($regAdminPassword != $regPasswordConfirm || $regAdminPassword == "") {  //regPassword ==  regPatientPassword
+if ($regAdminPassword != $regPasswordConfirm || $regAdminPassword == "") { 
     $_SESSION['regError'] = 2; 
     $referer = "adminRegister.php"; 
     header("Location: ../".$referer); 
@@ -26,8 +26,8 @@ if ($regAdminPassword != $regPasswordConfirm || $regAdminPassword == "") {  //re
 } else { 
 
     // Password is valid 
-    // Code to Check if the user has already registered
-    $stmt = $conn->prepare("SELECT * FROM admin_ WHERE email = ?"); //userLogin== email
+    // Check if the admin has already registered
+    $stmt = $conn->prepare("SELECT * FROM admin_ WHERE email = ?");
     $stmt->bind_param("s", $regLogin);
     $stmt->execute();
     $stmt->store_result();
@@ -38,12 +38,9 @@ if ($regAdminPassword != $regPasswordConfirm || $regAdminPassword == "") {  //re
         $referer = "adminRegister.php";
     } else {
 
-        // $stmt = $conn->prepare("INSERT INTO patient(email, patientPassword, firstName, lastName, phoneNumber, gender, dateOfBirth, postCode, address_) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)"); // users== patient  //userPassword == patientPassword
-        // $hashedPw = password_hash($regPatientPassword, PASSWORD_BCRYPT);
-        // $stmt->bind_param("sssssssss", $regLogin, $hashedPw, $regFirstName, $regLastName, $regPhoneNumber, $regGender, $regDateOfBirth, $regPostCode, $regAddress_);
-        // $stmt->execute();
+      
 
-        // Insert the New User into the Database
+        // Insert the New admin user into the Database
         $stmt = $conn->prepare("INSERT INTO admin_(email, adminPassword, contactNumber) VALUES (?, ?, ?)"); // users== patient  //userPassword == patientPassword
         $hashedPw = password_hash($regAdminPassword, PASSWORD_BCRYPT);
         $stmt->bind_param("sss", $regLogin, $hashedPw, $regContactNumber);
@@ -59,6 +56,6 @@ if ($regAdminPassword != $regPasswordConfirm || $regAdminPassword == "") {  //re
 $stmt->close();
 $conn->close();
 
-header("Location: ".$referer); // send user to diff page 
+header("Location: ".$referer); // send user to different page 
 exit;
 

@@ -65,6 +65,7 @@ $result = $stmt->get_result();
             <h2>Search for Patient</h2><br>
         </div>
 
+        <!-- form below allows admin to search for patients on the system -->
         <div>
             <div class="patientSearchForm">
                 <form method="get" action="patientSearch.php">
@@ -89,7 +90,7 @@ $result = $stmt->get_result();
                     echo "<p>Search found: {$result->num_rows} result(s)";
                     while ($obj = $result->fetch_object()) {
 
-                        //enter columns from table
+                        //enter columns from patients table
                         echo "<h3>Patient ID: ($obj->ID)</h3>";
                         echo "<h3>Name: ($obj->firstName)</h3>";
                         echo "<h3>Second name: ($obj->lastName)</h3>";

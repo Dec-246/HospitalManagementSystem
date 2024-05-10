@@ -1,11 +1,6 @@
 <?php
-ini_set("display_errors", 1);
 require('patientSessions.php');
 require('config.php');
-// print_r($_POST);
-// users (table)== patient  
-// userPassword == patientPassword 
-// userLogin== email
 
 //// functions
 function checkDbForTheUser($email, $conn)

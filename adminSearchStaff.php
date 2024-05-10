@@ -35,7 +35,7 @@ $result = $stmt->get_result();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>View staff</title>
+    <title>Search staff members</title>
     <link rel="stylesheet" href="css/global.css" type="text/css" />
 
     <link rel="stylesheet" href="css/mobile.css" type="text/css" media="only screen and (max-width : 620px)" />
@@ -66,6 +66,7 @@ $result = $stmt->get_result();
         </div>
 
         <div>
+            <!-- form below allows admin to search for staff on the system -->
             <!-- asks user to enter first name and last name of the user that they are wanting to search for -->
             <div class="patientSearchForm">
                 <form method="get" action="adminSearchStaff.php">

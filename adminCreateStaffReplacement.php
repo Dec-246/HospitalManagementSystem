@@ -1,7 +1,7 @@
 <!-- staff user registration  -->
 
 <?php
-// Registration Logic Here
+// Registration Logic
 ini_set("display_errors", 1);
 require('patientSessions.php');
 require('config.php');

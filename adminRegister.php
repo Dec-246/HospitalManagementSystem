@@ -9,7 +9,7 @@ require('patientSessions.php');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>View staff</title>
+    <title>admin register</title>
     <link rel="stylesheet" href="css/global.css" type="text/css" />
 
     <link rel="stylesheet" href="css/mobile.css" type="text/css" media="only screen and (max-width : 620px)" />
@@ -61,7 +61,8 @@ require('patientSessions.php');
                         }
                         ?>
                     </div>
-
+                    <!-- Register form for the admin. i have not linked tihs to the website 
+                        due to the fact that i did not want random users to get the same power as an admin.  -->
                     <div class="LoginForm">
                         <form action="adminUserRegistration.php" method="post">
 
@@ -94,7 +95,7 @@ require('patientSessions.php');
                         </form>
                     </div>
 
-                    <!-- Password message box requirement -->
+                    <!-- Password message box requirements -->
                     <div id="message" class="passwordMessage">
                         <h4>Password must contain:</h4>
                         <p id="letter" class="invalid">A <b>lowercase</b> letters</p>

@@ -62,6 +62,7 @@ require('testSessions.php');
                         ?>
                     </div>
 
+                    
                     <div class="LoginForm">
                         <form action="testUserRegistration.php" method="post">
                             <div>

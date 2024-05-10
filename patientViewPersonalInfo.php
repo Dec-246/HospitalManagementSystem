@@ -51,6 +51,8 @@
             if (mysqli_num_rows($result) > 0) {
                 while ($row = mysqli_fetch_assoc($result)) { //mysqli_fetch_assoc // fetches next available row within our object 
 
+                    //echos data from patient data
+
                     echo "Patient ID: " . $row["ID"] . "<br>";
                     echo "Assigned staff ID: " . $row["assignedStaffID"] . "<br>";
                     echo "First name: " . $row["firstName"] . "<br>";

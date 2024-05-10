@@ -59,6 +59,7 @@ include_once('adminViewPatientsSQL.php');
                         <?php for ($i = 0; $i < count($patient); $i++) : ?>
 
                             <tr>
+                                <!-- displays data from patient table -->
                                 <td><?php echo $patient[$i]['ID'] ?></td>
                                 <td><?php echo $patient[$i]['Name_'] ?></td>
                                 <td><?php echo $patient[$i]['Contact'] ?></td>
@@ -68,7 +69,7 @@ include_once('adminViewPatientsSQL.php');
                                 <td><?php echo $patient[$i]['gender'] ?></td>
 
                                 <td><a href="adminUpdatePatient.php?assertedDoctor=<?php echo $patient[$i]['assertedDoctor']; ?>">Update</a></td>			
-                                <!-- updatePatient.php?ID --- PREVIOUS  -->
+                                
                             </tr>
                         <?php endfor; ?>
                     </table>

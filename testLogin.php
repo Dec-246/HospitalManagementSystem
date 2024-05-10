@@ -1,8 +1,7 @@
 <?php
-// add includes to sessions
-ini_set("display_errors", 1);
 require('testSessions.php');
 ?>
+
 <!doctype html>
 <html>
 
@@ -83,11 +82,7 @@ require('testSessions.php');
             </div>
         </div>
     </div>
-    <?php
-    // debugging include
-    // remove in productions
-    // require('testDebugger.php');
-    ?>
+   
     <div class="footer">
         <?php
         include("php/includes/footer.php");

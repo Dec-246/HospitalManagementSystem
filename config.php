@@ -1,4 +1,5 @@
 <?php
+    //database host details
     $servername = "sql8.freesqldatabase.com";
     $username = "sql8697588";
     $password = "wvbCzfYPiF";

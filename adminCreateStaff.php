@@ -1,9 +1,6 @@
 <?php
-
 session_start();
-
     require_once('php/db_functions/db_connect.php');
-
 ?>
 
 <!DOCTYPE html>
@@ -60,7 +57,7 @@ session_start();
                 }
             </script>
 
-            <!--form action= php/admin/adminCreateStaffSQL.php -->
+            <!--form for staff details -->
 
             <form action="adminCreateStaffSQL.php" method="POST" >
                 <div class="createStaffForm">

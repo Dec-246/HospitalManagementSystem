@@ -1,9 +1,8 @@
 <?php
-// Registration Logic Here
-ini_set("display_errors", 1);
 require('patientSessions.php');
 require('config.php');
 
+// Registration Logic Here
 $regLogin = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
 $regPatientPassword = $_POST['patientPassword'];
 $regPasswordConfirm = $_POST['passwordConfirm'];

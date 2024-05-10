@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 require_once('php/db_functions/db_connect.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {

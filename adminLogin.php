@@ -1,15 +1,15 @@
 <?php
-
 ini_set("display_errors", 1);
 require('patientSessions.php');
 ?>
+
 <!doctype html>
 <html>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>View staff</title>
+    <title>admin login</title>
     <link rel="stylesheet" href="css/global.css" type="text/css" />
 
     <link rel="stylesheet" href="css/mobile.css" type="text/css" media="only screen and (max-width : 620px)" />
@@ -67,11 +67,9 @@ require('patientSessions.php');
                                 <input type="submit" value="Login">
                             </div>
                         </form>
-                        <!-- <p><a href="patientRegister.php">Register</a></p> -->
-                        <!-- <p><a href="adminDashboard.php">Not Allowed!</a></p> -->
                     </div>
 
-                    <!-- Password message box requirement -->
+                    <!-- Password message box requirements -->
                     <div id="message" class="passwordMessage">
                         <h4>Password must contain:</h4>
                         <p id="letter" class="invalid">A <b>lowercase</b> letters</p>

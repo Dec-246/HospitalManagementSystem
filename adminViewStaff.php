@@ -58,6 +58,8 @@ include_once('adminViewStaffSQL.php');
                         <?php for ($i = 0; $i < count($staff); $i++) : ?>
 
                             <tr>
+                                <!-- code below echos the data from the staff table into a grid 
+                                on the admins 'view staff page -->
                                 <td><?php echo $staff[$i]['ID'] ?></td>
                                 <td><?php echo $staff[$i]['Name'] ?></td>
                                 <td><?php echo $staff[$i]['Contact'] ?></td>

@@ -11,7 +11,7 @@ require('patientSessions.php');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>View staff</title>
+    <title>create employee</title>
     <link rel="stylesheet" href="css/global.css" type="text/css" />
 
     <link rel="stylesheet" href="css/mobile.css" type="text/css" media="only screen and (max-width : 620px)" />
@@ -64,6 +64,7 @@ require('patientSessions.php');
                         ?>
                     </div>
 
+                    <!-- form for admin to fill out staff members details to create a new staff member on the system -->
                     <div class="LoginForm">
                         <form action="adminCreateStaffReplacement.php" method="post">
 
@@ -79,7 +80,6 @@ require('patientSessions.php');
                             <div class="createStaffForm">
                                 <input type="text" name="phoneNumber" placeholder="phoneNumber"><br>
                             </div>
-
                             
                             <div class="createStaffForm">
                                 <input type="text" name="gender" placeholder="gender"><br>
@@ -120,7 +120,7 @@ require('patientSessions.php');
                         </form>
                     </div><br>
 
-                    <!-- Password message box requirement -->
+                    <!-- Password message box requirements -->
                     <div id="message" class="passwordMessage">
                         <h4>Password must contain:</h4>
                         <p id="letter" class="invalid">A <b>lowercase</b> letters</p>

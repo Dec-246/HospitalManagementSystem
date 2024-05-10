@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>View staff</title>
+    <title>Treatment</title>
     <link rel="stylesheet" href="css/global.css" type="text/css" />
 
     <link rel="stylesheet" href="css/mobile.css" type="text/css" media="only screen and (max-width : 620px)" />
@@ -52,6 +52,7 @@
             if (mysqli_num_rows($result) > 0) {
                 while ($row = mysqli_fetch_assoc($result)) { //mysqli_fetch_assoc // fetches next available row within our object 
 
+                    //echos data from treatment table
                     echo "Treatment ID: " . $row["ID"] . "<br>";
                     echo "Medication: " . $row["medication"] . "<br>";
                     echo "Treatment type: " . $row["treatmentType"] . "<br>";

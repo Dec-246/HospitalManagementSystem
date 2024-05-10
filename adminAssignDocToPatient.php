@@ -9,7 +9,7 @@ include("config.php");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>View staff</title>
+    <title>Assign staff to patient</title>
     <link rel="stylesheet" href="css/global.css" type="text/css" />
 
     <link rel="stylesheet" href="css/mobile.css" type="text/css" media="only screen and (max-width : 620px)" />
@@ -53,7 +53,7 @@ include("config.php");
                         FROM patient';
                 $result = $conn->query($sql);
 
-                if ($result->num_rows > 0) {    // Check avalible currencys
+                if ($result->num_rows > 0) {    // Check avalible patients
                     // Output options
                     while ($row = $result->fetch_assoc()) {
                         $ID = $row['ID'];
@@ -76,7 +76,7 @@ include("config.php");
                         FROM staff';
                 $result = $conn->query($sql);
 
-                if ($result->num_rows > 0) {    // Check avalible currencys
+                if ($result->num_rows > 0) {    // Check avalible staff members
                     // Output options
                     while ($row = $result->fetch_assoc()) {
                         $ID = $row['ID'];
@@ -101,12 +101,6 @@ include("config.php");
             </select><br><br>
 
         </div>
-
-
-
-
-
-
 
         <div class="footer">
             <?php

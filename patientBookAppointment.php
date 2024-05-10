@@ -1,9 +1,6 @@
 <?php
-
 session_start();
-
     require_once('php/db_functions/db_connect.php');
-
 ?>
 
 <!DOCTYPE html>
@@ -60,15 +57,8 @@ session_start();
                 }
             </script>
 
-
+            <!-- form allows the patients to book appointments -->
             <form class="bookAppointmentForm" action="patientBookAppointmentSQL.php" method="POST" >
-                <!-- <br><br><div class="bookAppointment">
-                    <input type="text" name="firstName" placeholder="First Name"><br>
-                </div><br>
-
-                <div class="bookAppointment">
-                    <input type="text" name="lastName" placeholder="Last Name"><br>
-                </div><br> -->
 
                 <div class="bookAppointment">
                     <input type="text" name="idPatient" placeholder="Patient ID"><br><br>

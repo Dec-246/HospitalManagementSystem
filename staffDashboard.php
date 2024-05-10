@@ -28,7 +28,6 @@
             </div>
 
             <main>
-
                 <script>
                     // Get button
                     let mybutton = document.getElementById("myBtn");
@@ -80,19 +79,13 @@
                         <a href="staffViewBookings.php">Patient bookings</a>
                     </div>
                 </div>
-
-
-
-
             </main>
-
-
         </div>
+
         <div class="footer">
             <?php
             include("php/includes/footer.php");
             ?>
         </div>
     </body>
-
 </html>

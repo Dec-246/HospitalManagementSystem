@@ -1,6 +1,6 @@
 <?php
-// ini_set("display_errors",1); //1= true // 0= false
-include("config.php"); // use the config file instead of db_connect
+
+include("config.php"); 
 include_once('staffViewResultsSQL.php');
 ?>
 <!DOCTYPE html>
@@ -58,6 +58,7 @@ include_once('staffViewResultsSQL.php');
                         <?php for ($i = 0; $i < count($results); $i++) : ?>
 
                             <tr>
+                                <!-- displays data from results page -->
                                 <td><?php echo $results[$i]['ID'] ?></td>
                                 <td><?php echo $results[$i]['Diagnosis'] ?></td>
                                 <td><?php echo $results[$i]['healthAssessment'] ?></td>

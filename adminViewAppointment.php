@@ -1,6 +1,6 @@
 <?php
 ini_set("display_errors",1);
-include("config.php"); // use the config file instead of db_connect
+include("config.php"); 
 include_once('adminViewAppointmentSQL.php');
 ?>
 <!DOCTYPE html>
@@ -9,7 +9,7 @@ include_once('adminViewAppointmentSQL.php');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>View staff</title>
+    <title>View appointment</title>
     <link rel="stylesheet" href="css/global.css" type="text/css" />
 
     <link rel="stylesheet" href="css/mobile.css" type="text/css" media="only screen and (max-width : 620px)" />
@@ -56,6 +56,8 @@ include_once('adminViewAppointmentSQL.php');
 
                         <?php for ($i = 0; $i < count($appointment); $i++) : ?>
 
+                            <!-- code below echos the data from the appointment table into a grid 
+                                on the admins 'view upcoming appointment page -->
                             <tr>
                                 <td><?php echo $appointment[$i]['ID'] ?></td>
                                 <td><?php echo $appointment[$i]['dateTime'] ?></td>
@@ -64,6 +66,8 @@ include_once('adminViewAppointmentSQL.php');
                                 <td><?php echo $appointment[$i]['staffName'] ?></td>
 
 
+                                <!-- unfortunately i did not manage to get the update pages working. but this is something that i
+                                    would improve upon if i had more time -->
                                 <td><a href="updateAppointment.php?ID=<?php echo $appointment[$i]['ID']; ?>">Update</a></td>			
                                 
                             </tr>

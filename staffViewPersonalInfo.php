@@ -43,9 +43,10 @@
 
         <div class="viewPersonalInfo">
             <?php
-            // ini_set("display_errors",1);
+
             include("config.php");
 
+            // selects data from staff table
             $sql = "SELECT * FROM staff WHERE ID = 1";
             $result = mysqli_query($conn, $sql);
 
@@ -69,12 +70,6 @@
             mysqli_close($conn);
             ?>
         </div><br><br><br>
-
-
-
-
-
-
 
         <div class="footer">
             <?php

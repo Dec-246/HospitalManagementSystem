@@ -1,6 +1,5 @@
 <!-- check for search submission -->
 <?php
-// ini_set("display_errors", 1);
 include("config.php");
 
 //getting first and last name from form
@@ -35,7 +34,7 @@ $result = $stmt->get_result();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>View staff</title>
+    <title>Search patients</title>
     <link rel="stylesheet" href="css/global.css" type="text/css" />
 
     <link rel="stylesheet" href="css/mobile.css" type="text/css" media="only screen and (max-width : 620px)" />

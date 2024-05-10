@@ -60,6 +60,8 @@ include_once('adminViewPatientsSQL.php');
                         <?php for ($i = 0; $i < count($patient); $i++) : ?>
 
                             <tr>
+                                <!-- code below echos the data from the patient table into a grid 
+                                on the admins 'view patient page -->
                                 <td><?php echo $patient[$i]['ID'] ?></td>
                                 <td><?php echo $patient[$i]['Name_'] ?></td>
                                 <td><?php echo $patient[$i]['Contact'] ?></td>
@@ -69,7 +71,7 @@ include_once('adminViewPatientsSQL.php');
                                 <td><?php echo $patient[$i]['gender'] ?></td>
 
                                 <td><a href="adminUpdatePatient.php?ID=<?php echo $patient[$i]['ID']; ?>">Update</a></td>			
-                                <!-- updatePatient.php?ID --- PREVIOUS  -->
+                                
                             </tr>
                         <?php endfor; ?>
                     </table>

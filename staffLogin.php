@@ -1,15 +1,14 @@
 <?php
-// add includes to sessions
-ini_set("display_errors", 1);
 require('patientSessions.php');
 ?>
+
 <!doctype html>
 <html>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>View staff</title>
+    <title>Staff login</title>
     <link rel="stylesheet" href="css/global.css" type="text/css" />
 
     <link rel="stylesheet" href="css/mobile.css" type="text/css" media="only screen and (max-width : 620px)" />
@@ -51,6 +50,7 @@ require('patientSessions.php');
                                 ?>
                     </div>
                 
+                    <!-- login form for staff members -->
                     <div class="LoginForm">
                         <form action="staffCheckLogin.php" method="post">
                             <div>
@@ -84,11 +84,7 @@ require('patientSessions.php');
             </div>
         </div>
     </div>
-    <?php
-    // debugging include
-    // remove in productions
-    // require('testDebugger.php');
-    ?>
+
     <div class="footer">
         <?php
         include("php/includes/footer.php");

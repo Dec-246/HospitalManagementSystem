@@ -30,6 +30,3 @@ require('testDebugger.php');
 ?>
 </body>
 </html>
-
-<!-- d@d.com -->
-<!-- test  -->

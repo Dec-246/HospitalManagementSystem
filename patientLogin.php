@@ -9,7 +9,7 @@ require('patientSessions.php');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>View staff</title>
+    <title>Login</title>
     <link rel="stylesheet" href="css/global.css" type="text/css" />
 
     <link rel="stylesheet" href="css/mobile.css" type="text/css" media="only screen and (max-width : 620px)" />
@@ -50,9 +50,8 @@ require('patientSessions.php');
                                 }
                                 ?>
                     </div>
-                    <!-- users (table)== patient  
-            //userPassword == patientPassword -->
-                    <!-- //userLogin== email -->
+                  
+                    <!-- log in form for the patients -->
                     <div class="LoginForm">
                         <form action="patientCheckLogin.php" method="post">
                             <div>

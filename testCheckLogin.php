@@ -3,9 +3,7 @@ ini_set("display_errors", 1);
 require('testSessions.php');
 require('config.php');
 // print_r($_POST);
-// users (table)== patient  
-// userPassword == patientPassword 
-// userLogin== email
+
 
 //// functions
 function checkDbForTheUser($email, $conn)

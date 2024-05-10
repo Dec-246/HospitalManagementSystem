@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>View staff</title>
+        <title>Prescription</title>
         <link rel="stylesheet" href="css/global.css" type="text/css" />
 
         <link rel="stylesheet" href="css/mobile.css" type="text/css" media="only screen and (max-width : 620px)" />
@@ -42,7 +42,7 @@
             
             <div class="viewPrescription">
                 <?php
-            // ini_set("display_errors",1);
+
             include ("config.php");
             
                 $sql = "SELECT * FROM prescription";
@@ -51,6 +51,7 @@
                 if(mysqli_num_rows($result) > 0){
                     while($row = mysqli_fetch_assoc($result)){ //mysqli_fetch_assoc // fetches next available row within our object 
                        
+                        //echos data from prescription table
                         echo "Prescription ID: " . $row["ID"] . "<br>";
                         echo "Treatment ID: " . $row["treatmentID"] . "<br>";
                         echo "Start date of prescription: " . $row["prescriptionStartDate"] . "<br>";

@@ -9,7 +9,7 @@ require('patientSessions.php');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>View staff</title>
+    <title>Sign up</title>
     <link rel="stylesheet" href="css/global.css" type="text/css" />
 
     <link rel="stylesheet" href="css/mobile.css" type="text/css" media="only screen and (max-width : 620px)" />
@@ -62,6 +62,7 @@ require('patientSessions.php');
                         ?>
                     </div>
 
+                    <!-- register form for patients -->
                     <div class="LoginForm">
                         <form action="patientUserRegistration.php" method="post">
 
@@ -135,9 +136,7 @@ require('patientSessions.php');
             </div>
         </div>
     </div>
-    <?php
-    // require('testDebugger.php');
-    ?>
+   
     <div class="footer">
         <?php
         include("php/includes/footer.php");
